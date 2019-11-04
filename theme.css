@@ -1,8 +1,14 @@
-h1 {
-  text-align: center;
-  font-family: "Comic Sans MS"
+body {
+  background-color: #212121;
+  color: #F3F3F3
 }
-h2 {
-  text-align: center;
-  font-family: "Comic Sans MS"
+
+#title {
+	text-align: center;
+	font-family: 'Hind', sans-serif
+}
+#subtitle {
+	text-align: center;
+	font-family: 'Palanquin Dark', sans-serif;
+	font-size: 80px
 }
