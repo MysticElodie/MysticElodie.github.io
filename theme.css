@@ -1,14 +1,89 @@
 body {
-  background-color: #212121;
-  color: #F3F3F3
+	background-color: #191919;
+	color: #E5E5E5;
+	font-family: 'Roboto', sans-serif;
+	line-height: 125%;
+	margin: auto;
+	max-width: 1000px;
 }
 
-#title {
+a {
+	color: #F21D6E;
+}
+
+a:hover {
+	color: #FF498C;
+}
+
+li {
+	padding-top: 4px;
+	padding-bottom: 4px
+}
+
+code {
+	background-color: #2d2d2d;
+	font-family: 'Roboto Mono', monospace;
+	font-size: 15px;
+	padding-left: 2px;
+	padding-right: 2px
+}
+
+hr {
+	background-color: #F21D6E;
+	border: none;
+	height: 1px;
+	margin-top: 16px;
+	margin-bottom: 18px;
+}
+
+#header {
 	text-align: center;
-	font-family: 'Hind', sans-serif
+	padding: 30px
+}
+#title {
+	font-family: 'Work Sans', sans-serif;
+	font-size: 72px;
+	font-weight: 200;
+	margin-top: 20px
 }
 #subtitle {
+	font-weight: 300;
+	margin-top: 30px;
+	margin-bottom: 15px
+}
+
+#button {
+	display: inline-block;
+	border: 2px solid #2d2d2d;
+	border-radius: 35px;
+	height: 40px;
+	width: 130px;
+	line-height: 38px;
+	margin-left: 10px;
+	margin-right: 10px;
 	text-align: center;
-	font-family: 'Palanquin Dark', sans-serif;
-	font-size: 80px
+	transition: background-color 0.3s;
+}
+
+#button:hover, #social_link:hover {
+	background-color: #2d2d2d;
+	color: #F21D6E;
+}
+
+#buttons {
+	// background-color: ;
+	font-size: 20px;
+	font-weight: 300;
+}
+
+#social_link {
+	display: inline-block;
+	border: 2px solid #2d2d2d;
+	border-radius: 35px;
+	height: 35px;
+	width: 35px;
+	line-height: 38px;
+	margin-left: 3px;
+	margin-right: 3px;
+	transition: background-color 0.3s;
 }

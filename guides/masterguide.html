@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Masterguide // ellie.zone</title>
+	<link rel="stylesheet" type="text/css" href="../theme.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto|Work+Sans&display=swap" rel="stylesheet">
+	<link rel="shortcut icon" href="../img/favicon.ico" />
+</head>
+<body>
+	<div id="header">
+		<div id="title">Morrowind Visual Masterguide</div>
+		<div id="subtitle">Last updated: November 13, 2019</div>
+
+		<div id="buttons">
+			<a style="padding-left: 12px; padding-right: 12px; text-decoration: none" href="https://ellie.zone">Home</a>
+			<a style="padding-left: 12px; padding-right: 12px; text-decoration: none" href="https://ellie.zone/guides">Guides</a>
+			<a style="padding-left: 12px; padding-right: 12px; text-decoration: none" href="https://ellie.zone/mods">Mods</a>
+		</div>
+	</div>
+	<div id="content">
+	<base target="_blank">
+<h1>Introduction</h1>
+
+<p>While it's tempting to jump right in and start downloading mods, PLEASE read these introductory notes first, especially if you're new to Morrowind or Mod Organizer 2.</p>
+
+<ul>
+	<li>This guide assumes that you own a legal copy of Morrowind's basegame and its expansions. This means you should have either the official discs, or one of the many official digital releases.
+		<ul>
+			<li>Additionally, the guide is designed for players using the original engine. Some of the mods and programs used won't work correctly (or at all) with OpenMW.
+		</ul>
+	<li>It's always worth looking at a mod's description page (if it has one) before downloading it! Though this guide should cover everything you need to install each mod, it's best to know what you're installing.
+	<li>The guide is designed with Mod Organizer 2 in mind. MO2 has official support for Morrowind, and in my opinion, it's the most convinient tool you can use for mod management. MO2 has a lot of different functions, and generally I'm not going to go too in-depth about how each one works. If you're coming to Morrowind from newer Bethesda games, there's a good chance you're already familiar with the program. If not, GamerPoets has a <a href="https://www.youtube.com/watch?v=ruq6hQIAvB8&list=PLlN8weLk86Xh3ue76x2ibqtmMramwQmHB">great set of videos</a> on installing and using it, if you're confused about anything.
+		<ul>
+			<li>For many mods, MO2 will <a href="https://youtu.be/LwaC7gP7_JM?t=358">require you to point to a data directory folder when installing</a>. Unless I specify otherwise in the guide, the data directory folder will always be the <code>Data Files</code> folder.
+			<li>Some mods in this guide will need to be installed multiple times, or multiple files will need to be downloaded from a single mod page. When this happens, <a href="https://youtu.be/LwaC7gP7_JM?t=397">make sure to either merge or rename the mod</a> unless you're fully reinstalling it.
+		</ul>
+</ul>
+
+<h1>Installation</h1>
+
+<ul>
+	<li>You'll want to start with a new installation of the game. Preferably, you want to make sure that it's installed outside of the Program Files folder to prevent issues; if you're playing the Steam version, <a href="https://support.steampowered.com/kb_article.php?ref=7418-YUBN-8129">this page</a> will show you how to change your install location for games, if you need to.
+	<li>If you're playing any GOTY release of the game, then you already have the newest official patches. If you're playing on original disc releases, you can find the official patches for the game and its expansions towards the bottom of <a href="https://web.archive.org/web/20190818065658/https://patches.bethsoft.com/">this page</a>.
+	<li>Before we do anything else, launch the game once to make sure everything is correctly installed. You don't have to go any further than the title screen.
+</ul>
+
+<h1>External Tools</h1>
+
+<ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/19510">Morrowind Code Patch</a> - This program patches many bugs in Morrowind's program. Manually download the main file, extract it into the game's main folder (The <code>Morrowind</code> folder, not <code>Data Files</code>) and run it.
+		<ul>
+			<li>MCP's most essential options are all checked by default, but I'd recommend looking through the other options too; a lot of them are very welcome changes. Some noteworthy options;
+				<ul>
+					<li><code>Swift casting</code> allows you to cast spells much more efficiently, and do so while holding a weapon.
+					<li><code>Argonian clothing choice</code> makes female Argonians use male meshes for armor and clothing, since they don't have defined breasts.
+					<li><code>Hi-def cutscene support</code> is required by some of the mods in this guide.
+					<li><code>Map expansion (for Tamriel Rebuilt)</code> is essential for TR users, zooming out the map so that all of the mainland is visible.
+					<li><code>Shortcut key improvements</code> offers many fixes and improvements for keyboard shortcuts.
+					<li><code>Better typography</code> improves the interfaces for books, scrolls, and the quest journal.
+				</ul>
+			<li>When you're done, click <code>Apply chosen patches</code> and then close the program.
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/41102">MGE XE</a> - This program's primary focus is visual improvements such as shaders and distant terrain. Manually download the <code>MGE XE Manual Install</code> file
+		<ul>
+			<li>Due to how MO2 works, we'll need to run MGE XE and several other programs through it. MO2 should automatically detect <code>MGEXEgui.exe</code> and add it to the executables list, but if not, you can <a href="https://youtu.be/mqjzxQ7D-ZQ?t=248">add it yourself</a>. Once it's added, launch the program via MO2.
+			<li>We won't be changing most of MGE XE's settings until the end of the guide, but there's a few things we can do now.
+				<ul>
+					<li>On the Graphics tab, choose your preferred settings for resolution, windowed mode, antialiasing, etc. If "Auto FOV" isn't enabled by default, I recommend checking it. For now, don't enable shaders.
+					<li>Skip over the Distant Land tab entirely for now, and go to the In-Game tab. By default, "Skip Opening Movie" is checked. If you want the Bethesda logo to display on startup, you can uncheck it. "Crosshair Autohide" is a nice change, hiding the crosshair when it isn't needed.
+					<li>Still on the In-Game tab, change the Dynamic lighting coefficients to the following. This is the last thing we'll need to change in MGE XE for now;
+						<ul>
+							<li>Quadratic 2.619
+							<li>Linear 1.0
+							<li>Constant 0.382
+						</ul>
+				</ul>
+			<li>Once you're done changing MGE XE's settings, you can close the program. Additionally, run the <code>MWSE-Update.exe</code> that came with it (you don't have to add it as an MO2 executable, just run it normally from the game's folder) to make sure you have the newest version of the Morrowind Script Extender installed.
+		</ul>
+	<li><a href="https://github.com/mlox/mlox/releases/tag/v1.0">mlox</a> - mlox is Morrowind's equivalent of load order sorting tools such as LOOT. Download the <code>mlox.exe</code> file, and move it into your main game folder. Then, you'll need to <a href="https://youtu.be/mqjzxQ7D-ZQ?t=248">add it to MO2</a>.
+		<ul>
+			<li>After adding it, launch mlox from MO2 to make sure it works and everything is setup. You shouldn't need to update your load order at this point, so you can just exit the program once it's finished loading.
+			<li>After launching the program to setup its files, you'll want to update the base file. In most cases, this will be <code>C:\Users\[Your Username]\AppData\Local\mlox\mlox</code>. Once you find it, replace <code>mlox_base.txt</code> with <a href="https://raw.githubusercontent.com/yooksi/mlox/master/data/mlox_base.txt">the newest version</a>.
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/45439">Wrye Mash - Polemos Fork</a> - Similar to Wrye Bash for newer Bethesda games, this tool provides a lot of useful functionality for modded installations of Morrowind. Download the <code>Wrye Mash 2019 - x64 - manual installation archive</code> file, and extract it into the game's main folder.
+		<ul>
+			<li>Before we can add Wrye Mash to MO2, we need to run it normally. Run <code>mash64.exe</code> in the <code>Mopy</code> folder, and click through the config wizard.
+				<ul>
+					<li>For the first entry, navigate to your main game folder.
+					<li>The second entry's location doesn't matter; it's intended for anyone using Wrye Mash as a mod manager, which we aren't in this guide. (I just created a "Mods" folder within my main Morrowind folder for it).
+					<li>For the Mlox directory option, select your <code>Mlox.exe</code> file.
+				</ul>
+			<li>You can keep the rest of the settings the same and finish setup, and then close Wrye Mash once it opens. Add Wrye Mash as an MO2 executable by adding the <code>mash64.exe</code>, and we're done with it for now.
+		</ul>
+	<li><a href="https://github.com/john-moonsugar/tes3cmd/releases/tag/v0.40-pre-release-2">tes3cmd</a> - A program used for cleaning dirty mod files for Morrowind. Download the <code>tes3cmd.exe</code> file and place it into your Morrowind's <code>Data Files</code> folder. That's all we need to do with it for now.
+</ul>
+
+<h1>Essential Mods</h1>
+
+<h3>Patches & Bug Fixes</h3>
+
+<ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/45096">Patch for Purists</a> - An unofficial patch for Morrowind, similar to the Unofficial Patches for future Bethesda games. Fixes a ton of issues all throughout the game.
+	<li><a href="http://mw.modhistory.com/download-90-10353">Texture Fix</a> - Fixes many landscape texture seams throughout Vvardenfell.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/46018">Texture Fix - Extended</a> - Additional fixes for the above mod. Only check the <code>Main File</code> during installation.
+	<li><a href="http://mw.modhistory.com/download-90-10388">Texture Fix - Bloodmoon</a> - Similar to the above mods, fixes many landscape seams on Solstheim. Skip this if you plan on using Solstheim Tomb of the Snow Prince (see the Major Mods section).
+	<li><a href="https://www.nexusmods.com/morrowind/mods/45634">Expeditious Exit</a> - Fixes a common crash that can occur when trying to exit the game, especially with modded installations.
+</ul>
+
+<h3>Official Plugins</h3>
+
+<p>Bethesda developed several official plugins for Morrowind following its release. <a href="https://en.uesp.net/wiki/Morrowind:Plugins">Information on these plugins can be found here</a>. Unfortunately, many of these came with issues, so we won't be using the original versions.</p>
+
+<ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/43931">Unofficial Morrowind Official Plugins Patched</a> - This mod project includes the official plugins with many bugs fixed. You’re free to mix and match any of these; if there are any you don’t want to use, you can hide/delete their ESP files.
+		<ul>
+			<li>First, download and install the main <code>UMOPP 3.0.3</code> file.
+			<li>Next, download the <code>Merged and Compatibility Versions</code> file. What you install from here depends on which plugins you want to use.
+				<ul>
+					<li>If you plan on using all of the official plugins, only check <code>UMOPP Better Armor Merged</code>. After installing, hide/delete all of the .esp files from the <code>UMOPP 3.0.3</code> main file.
+					<li>If you only want to use some of the official plugins, only check <code>UMOPP Compatibility</code>. After installing, hide/delete all of the .esp files for plugins you don't want from both the main file and the compatibility versions file.
+				</ul>
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/46364">Pika's Miscellaneous Mods</a> - Download the <code>UMOPP Misc Mods and AddOns</code> file. Enhancements for several of the official plugins and an improved script, respectively.
+		<ul>
+			<li>Install <code>UMOPP Misc Mods and AddOns</code> first. Which options you check during installation depends on which official plugins you're using;
+				<ul>
+					<li>If you're using Adamantium Armor, check <code>Adamantium Pauldrons Enchant Fix</code>.
+					<li>If you're using Bitter Coast Sounds, check <code>Better Dragonfly Texture</code> and optionally, <code>Silent BCSounds</code> if you don't want the ambient sounds added by that plugin.
+					<li>If you're using Master Index, check <code>Better Master Index Mesh</code>.
+					<li>If using Siege at Firemoth, check <code>Grurn the Lich Sounds</code>.
+					<li>If using LeFemm Armor, check <code>Sirollus Saccus Training Fix</code>.
+				</ul>
+		</ul>
+</ul>
+
+<h3>Lighting</h3>
+
+<ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/39605">True Lights and Darkness</a> - Overhauls Morrowind's lighting, making interior lights appear much more realistic. Optional, as some may find these lighting changes too dark (you'll need a light to navigate some dungeons).
+		<ul>
+			<li>Hide/delete <code>Mudcrab Island TLAD.esp</code> and <code>True_Lights_And_Darkness_1.0-NoDaylight.esp</code> after installing.
+		</ul>
+</ul>
+
+<h3>Major Mods</h3>
+
+<p>Before we install any more mods, there's several notable mods that I'm going to list now as there'll be some patches or special instructions for them throughout the rest of the guide. These are all optional; it's up to you whether or not you want to use them.</p>
+
+<ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/42145">Tamriel Rebuilt</a> - A massive fan project that aims to design and implement the entirety of Morrowind's mainland into the game. Still a work-in-progress, but already includes a completed area <a href="https://twitter.com/TamrielRebuilt/status/1131657783005327370">rivalling the size of TES IV's Cyrodiil</a>.
+		<ul>
+			<li><a href="https://www.nexusmods.com/morrowind/mods/44537">Tamriel Data</a> - A large asset repository required by Tamriel Rebuilt. Download the HD version.
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/46810">Vvardenfell and Solstheim Worldspace Remaster</a> - Currently, this mod primarily features <code>Solstheim Tomb of the Snow Prince</code>, a complete landscape overhaul of the island of Solstheim from Morrowind's Bloodmoon expansion. Don't download this mod yet if you want to use it; we'll be installing it later in the guide anyway. For now, just keep it in mind, as some mods will have seperate installation instructions for STotSP compatibility (including <code>Texture Fix - Bloodmoon</code> earlier in the guide).
+</ul>
+
+<h1>Base Retextures</h1>
+
+<h3>MWGigapixel</h3>
+
+<ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/46352">MWGigapixel</a> - Before we install any more replacers, you'll want to install this as our base texture replacer. AI upscales nearly every texture in the game. A lot of this will be replaced by better replacers later down the line, but it’s a solid base for everything that isn’t touched by other mods.
+</ul>
+
+<h3>Connary's Textures</h3>
+
+<ul>
+	<li><a href="http://mw.modhistory.com/download-56-5740">Connary's Landscapes - Grazelands</a> - A retexture set for landscapes and flora in the Grazelands region.
+	<li><a href="http://mw.modhistory.com/download-56-15572">Connary's Landscapes - West Gash</a> - A retexture set for landscapes and flora in the West Gash region.
+	<li><a href="http://mw.modhistory.com/download-42-5745">Connary's Wood Furniture</a> - A retexture set for many wooden object textures.
+</ul>
+
+<h1>User Interface & Cinematics</h1>
+
+<h3>User Interface</h3>
+
+<ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/43922">Morrowind UI Revamped</a> - Revamps the vanilla user interface in HD. Choose the options that look best to you in the installer. I recommend the 50% smaller crosshair and 25% smaller cursor, but you can try out the options for yourself and find what works best for you.
+		<ul>
+			<li>You'll need to make some changes to your Morrowind.ini for this mod's text colors to work. Open MO2's ini editor (the puzzle pieces in the top left) and copy the following changes;
+				<ul>
+					<li><a href="https://drive.google.com/open?id=16Ae4zTeEQA4w_Wx9nfW0UPStuPMiwcDA">Classic theme</a>
+					<li><a href="https://drive.google.com/open?id=17h0XxXNz53WVX_fmoLg1pjrxrjEdZ-ZE">Dark theme</a>
+				</ul>
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/45982">Consistent Main Menus</a> - New textures for the menu options. Only download one file, I recommend one of the Pelagiad options;
+		<ul>
+			<li><code>Daedrish</code> is flat white text in a font that looks similar to Daedric text. <code>Pelagiad</code> is flat white text in a font that looks similar to vanilla's font. <code>Pelagiad OG</code> is yellow text in a font and style that looks most similar to vanilla.
+			<li>No matter which option you choose, when installing, check <code>Core Menu</code>, <code>MWSE MCM</code>, and if you're interested in the <a href="https://www.nexusmods.com/morrowind/mods/45952">Continue</a> mod, <code>Petetehgoat's Continue</code>.
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/36873">Better Dialogue Font</a> - Replaces Morrowind’s primary font, Magic Cards, with a much clearer version.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/44540">Better Daedric Font</a> - Replaces the Daedric font used on spell scrolls with a much clearer version.
+		<ul>
+			<li>When installing, create a dirctory (right click on <code>&lt;data&gt;</code>) named <code>Fonts</code>.
+				<ul>
+					<li>For a vanilla-friendly replacer (doesn't include X and Y characters), drag <code>daedric_font.fnt</code> into the <code>Fonts</code> directory, and click OK.
+					<li>For a replacer that includes the X and Y characters introduced in Oblivion, drag <code>daedric_font Standard+XY.fnt</code> into the <code>Fonts</code> directory, and click OK. Then, rename that file <code>daedric_font.fnt</code>.
+				</ul>
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/36948">Ultimate Icon Replacer</a> - Replaces all item inventory icons with better ones. Only download the <code>Ultimate Icon Replacer v1</code> file.
+</ul>
+
+<h3>Menu Screens</h3>
+
+<p>We have a lot of options for replacing the main menu and loading screens. You can either opt for a single replacer that changes both, or get seperate replacers for each.</p>
+<p>By default, mods that add new loadscreens will not stop the default loadscreens from appearing. To fix this, go to your Morrowind installation's <code>Data Files</code> folder and delete the <code>Splash</code> folder.</p>
+
+<ul>
+	<li>Main Menu only:
+		<ul>
+			<li><a href="https://www.nexusmods.com/morrowind/mods/43657">Title Screen and Logo Video Intro Reworked</a> - Vanilla-friendly replacer, essentially just a higher resolution vanilla main menu.
+				<ul>
+					<li>Download the <code>Title Screen Reworked</code> file for your aspect ratio. If you don't have the opening videos disabled in MGE XE, you can also download the <code>Logo Video Intro Reworked</code> file for your aspect ratio.
+				</ul>
+			<li><a href="https://www.nexusmods.com/morrowind/mods/47164">Widescreen Menu and Logo Replacer</a> - Vanilla-friendly replacer, featuring the logos of both of Morrowind's expansions.
+			<li><a href="https://www.nexusmods.com/morrowind/mods/43923">2015 Main Menu Background Replacers</a> - Two options for new main menu art. The first image is the main file, the second image is listed under old files.
+			<li><a href="https://www.nexusmods.com/morrowind/mods/43341">Animated Main Menu for Morrowind</a> - This one is distinct, because it’s animated rather than a static image. The downside is that it’s a MUCH larger file (around 300MB) as a result.
+		</ul>
+	<li>Loading Screens only:
+		<ul>
+			<li><a href="https://www.nexusmods.com/morrowind/mods/43603">Concept Art Based Loading Screens</a> - Concept art based loadscreens. Matches the main menu from <code>Title Screen and Logo Video Intro Reworked</code>.
+			<li><a href="https://www.nexusmods.com/morrowind/mods/47163">Widescreen Splash Replacer</a> - Vanilla-friendly replacer, simply the original loadscreen art updated in HD. Matches the main menu from <code>Widescreen Menu and Logo Replacer</code>.
+			<li><a href="https://www.nexusmods.com/morrowind/mods/45680">Fresco Splash Screens</a> - Loadscreens based on Morrowind’s religious fresco art.
+			<li><a href="https://www.nexusmods.com/morrowind/mods/47211">Splash Races - Widescreen</a> - Simple black loading screens with official renders.
+			<li><a href="https://www.nexusmods.com/morrowind/mods/44364">Morrowloading</a> - Oblivion-style loading screens with flavor text. Download both the main file and the fix.
+		</ul>
+	<li>Replacements for both:
+		<ul>
+			<li><a href="https://www.nexusmods.com/morrowind/mods/43081">HD Concept-art splash screen and main menu</a> - Similar to vanilla in style, with colored concept art for loadscreens. Note that the loadscreens in this replacer have text in Russian rather than English.
+		</ul>
+</ul>
+	
+<h3>Cinematics</h3>
+
+<ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/43923">2015 Main Menu Background Replacers</a> - If you're using any main menu replacer that isn't <code>Title Screen and Logo Video Intro Reworked</code> or <code>Widescreen Menu and Logo Replacer</code>, and you don't have the opening videos disabled in MGE XE, you’ll want to download the <code>Menu Intro Animation Remover</code> file from here.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/42352">Morrowind Bethesda logo HD makeover</a> - HD version of the Bethesda logo intro. Don’t bother with this if you have the opening videos disabled.
+		<ul>
+			<li>When installing, create a directory named <code>Video</code>, and drag one of the <code>bethesda logo.bik</code> files into it. The one in the <code>Nostalgia version</code> folder simply uses the original sound instead of a remade one.
+			<li>After installing, you can delete the version of the video that isn't in the <code>Video</code> folder.
+		</ul>
+	<li>There's two options to replace the introduction cutscene.
+		<ol>
+			<li><a href="https://www.nexusmods.com/morrowind/mods/39329">HD Intro Cinematic</a> - HD recreation of the intro cutscene. Download the correct version for your aspect ratio. After installing, rename the .bik file to <code>mw_intro.bik</code>.
+			<li><a href="https://www.nexusmods.com/morrowind/mods/46411">The Role They Were to Play</a> - This replacer changes the wording of the intro cutscene to refer to the player with gender neutral terms. However, it's in the vanilla resolution.
+		</ol>
+</ul>
+
+<h1>Mesh Fixes & Improvements</h1>
+
+<h3>General Mesh Replacers</h3>
+
+<ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/42134">Mesh Fix</a> - Fixes errors with a lot of different meshes.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/39348">Correct Meshes</a> - Corrects errors with many different meshes. Install as a BAIN installer, and only check <code>Data Files</code>.
+		<ul>
+			<li>Hide/delete the <code>BookArt</code> folder after installing.
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/46104">Correct UV Rocks</a> - Fixes UV mapping on many rock meshes.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/23233">Telvanni Exterior UV Fix</a> - Improved UVs for many Telvanni meshes.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/45384">Morrowind Optimization Patch</a> - Heavily optimizes a huge amount of Morrowind's meshes, and fixes many mesh errors in the process.
+		<ul>
+			<li>Check <code>Core</code> during installation. If you don't plan on using <code>Solstheim Tomb of the Snow Prince</code>, also check <code>Lake Fjalding Anti-Suck</code>.
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/38170">Better Meshes plus Optimization</a> - Lots of improvements for various meshes.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/43266">RR Mod Series - Better Meshes</a> - Even more improved meshes. Download <code>RR - Better Frescoes</code> and <code>RR - Better Meshes</code>. Only check <code>Main Files</code> when installing Better Meshes.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/46124">Glowing Flames</a> - Makes candle flames glow properly.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/46747">Properly Smoothed Meshes</a> - Aaand even more improved meshes. When installing, check <code>Core</code>, <code>Optional Textures</code>. and <code>Higher Poly Glowing Candles</code>.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/46855">Overlooked Meshes Replacer</a> - Replaces some meshes and textures that go largely untouched by any other mods. When installing, check <code>Core</code> and <code>Hires Textures</code>.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/45631">PikachunoTM's Mesh Artifact Improvements and Replacers</a> - Replacers for many artifacts and items. Download the 1.1 Update file.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/43148">Various Mesh Fixes</a> - Fixes for various mesh issues. Download and install the following files:
+		<ul>
+			<li>Correct Chests
+			<li>Correct Stronghold Meshes
+			<li>Correct Telvanni Interior Doors
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/43528">Dahrk Mods by Melchior</a> - There's a few mesh fixes and improvements we want from this page. Download and install;
+		<ul>
+			<li>Detailed Brooms_1.0
+			<li>ex_t_pole_hooked smoothed
+			<li>Hidden Imperial Door Fix
+			<li>UV Fix for Velothi Trap Doors_1.0
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/44321">Pherim's Small and WIP Mods</a> - There's a few great replacers on this page. Download and install;
+		<ul>
+			<li>Improved Bread Mesh and Texture
+				<ul>
+					<li>Only check <code>Data Files</code> when installing.
+				</ul>
+			<li>WIP Detailed Correct UV Rocks
+			<li>WIP Improved Cavern Clutter
+		</ul>
+</ul>
+
+<h3>Glow in the Dahrk</h3>
+
+<p>This isn't strictly a mesh replacer, but it has to be installed between the above and below sections to prevent issues.</p>
+
+<ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/45886">Glow in the Dahrk</a> - A fantastic mod that makes windows glow during the night, along with other enhancements. There are several options when installing:
+		<ul>
+			<li>Check <code>Core</code> and <code>Hi Res Window Texture Replacer</code>.
+			<li>If you want sunrays to shine through windows during the day, check <code>Interior Sunrays</code>.
+			<li>If you want the closed-off Nordic windows to be replaced with glass windows, check <code>Nord Glass Windows</code> and optionally <code>Nord Glass Windows Interior Sunrays</code>.
+			<li>If you want windows to be added to Telvanni structures, check <code>Telvanni Dormers on Vvardenfell</code>.
+				<ul>
+						<li>If you choose this option, it will install three .esp files; you don't need all three. I recommend keeping the merged <code>GITD_Telvanni_Dormers.ESP</code> file and hiding/deleting the other two.
+				</ul>
+			<li>If you want the closed-off windows in Raven Rock to be replaced with glass windows, check <code>Raven Rock Glass Windows</code> and optionally <code>Raven Rock Glass Windows Interior Sunrays</code>.
+			<li>If you're using Tamriel Rebuilt, check <code>Tamriel Rebuilt Patch</code> and optionally <code>Tamriel Rebuilt Patch Interior Sunrays</code>.
+		</ul>
+</ul>
+
+<h3>Project Atlas</h3>
+
+<ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/45399">Project Atlas</a> - Project Atlas replaces many of Morrowind's meshes with versions that use atlased textures, which can provide a significant FPS boost in certain areas. Download the main file. When installing, check the following:
+		<ul>
+			<li>Core
+			<li>BC Mushrooms - Smoothed
+			<li>BC Mushrooms - Smoothed - Glowing Bitter Coast Patch
+			<li>Redware - Smoothed
+			<li>Urns - Smoothed
+			<li>Wood Poles - Hi-res Texture
+			<li>If you're using Glow in the Dahrk, check <code>Glow in the Dahrk Patch</code>.
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/44057">MOAR Mesh Replacers</a> - More improved meshes. Unrelated to Project Atlas, just needs to be installed after it.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/45939">Pete's Minor Mods</a> - Improvements for several more meshes. Download and install the following files:
+		<ul>
+			<li>Enhanced Stone Walls
+			<li>furn_overhang_18_smooooooooth
+			<li>No Orcish Clown Shoes
+		</ul>
+</ul>
+
+<h1>Nature</h1>
+
+<h3>Graphic Herbalism</h3>
+
+<ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/46599">Graphic Herbalism - MWSE and OpenMW Edition</a> - Optional, but highly recommended. In vanilla Morrowind, all harvestable plants are containers; when you interact with them, the container menu opens and you can take the ingredients. Graphic Herbalism overhauls this system by making it so that interacting with a plant immediately picks it, and the plant's appearance changes to reflect that it has been picked; similar to Skyrim.
+		<ul>
+			<li>Download the main file, and if you're using Tamriel Rebuilt, also download <code>GH TR - PT Meshes</code>.
+			<li>Check <code>Core + Vanilla Meshes</code> and <code>Optional - Smoothed Meshes</code> during installation.
+		</ul>
+</ul>
+
+<h3>Trees</h3>
+
+<p>For starters, you'll want to grab all of the following:</p>
+
+<ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/45779">Remiros' Ascadian Isles Trees 2</a> - Replaces all trees in the Ascadian Isles region. Download the Remiros' Ascadian Isles Trees - Vanilla file.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/37489">Vurt's Bitter Coast Trees II</a> - Replaces all trees in the Bitter Coast region.
+		<ul>
+			<li><a href="https://www.nexusmods.com/morrowind/mods/46418">Vurt's Bitter Coast Trees II - Remastered and Optimized</a> - Optimizations and model fixes for the above mod.
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/44173">Vanilla-friendly West Gash Tree Replacer</a> - Replaces all trees in the West Gash region.
+	<li>For Grazelands trees, there's two options:
+		<ol>
+			<li><a href="https://www.nexusmods.com/morrowind/mods/37038">Vurts Grazeland Trees II</a> - This version offers a wider variety of trees as well as some unique new additions such as palm trees, if you enable the ESP. However, this makes it much less vanilla friendly and more likely to have compatibility issues with mods such as Tamriel Rebuilt.
+				<ul>
+					<li><a href="https://drive.google.com/open?id=17ljhczYNPiB5r9WzWzL_lo2V_HXl4CYi">Vurt's Trees Fix by Greatness7</a> - You’ll want to download this file as well; it fixes collision on a ton of the tree meshes in this mod.
+				</ul>
+			<li><a href="https://www.nexusmods.com/morrowind/mods/46402">Vurt's Grazeland Trees II - Vanilla Friendly Edition</a> - Much more faithful to the vanilla appearance than Vurt’s original mod, at the cost of some visual variety. Download the main file and the fix.
+		</ol>
+	<li>Mournhold's flora also has multiple options:
+		<ol>
+			<li><a href="https://www.nexusmods.com/morrowind/mods/35400">Vurt's Mournhold Trees II</a> - The much less vanilla friendly option, but they do look nice.
+				<ul>
+					<li><a href="https://www.nexusmods.com/morrowind/mods/45770">Vurt Mournhold Dead trees</a> - Makes the dead versions of Mournhold trees match Vurt’s new models.
+				</ul>
+			<li><a href="https://www.nexusmods.com/morrowind/mods/45805">Mournhold Flora Redux</a> - The more vanilla friendly option. Only download the main MFR - Trees file.
+		</ol>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/37856">Vurt's Solstheim Tree Replacer II</a> - You only need this if you AREN'T planning on using Solstheim Tomb of the Snow Prince, or if you ARE using a mod that makes use of the default Solstheim trees, such as Tamriel Rebuilt. Otherwise, you can skip it. Download the main file and the collision fix, install the main file first.
+		<ul>
+			<li>When installing the collision fix, create a directory named <code>F</code>, and put the .nif files into it. Then, create a directory named <code>Meshes</code> and put the <code>F</code> folder inside of that.
+			<li><a href="https://www.nexusmods.com/morrowind/mods/45941">Vurts Solstheim Tree Replacer II Fix</a> - An error fix for the above mod.
+		</ul>
+</ul>
+
+<h3>Plants</h3>
+
+<ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/42661">Apel's Bitter Coast Retexture</a> - Replaces various plants and textures in the Bitter Coast Region.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/42573">Apel's Asura Coast and Sheogorath Region Retexture</a> - Replaces various plants and textures in the Azura's Coast Region.
+		<ul>
+			<li>Download the main file, and hide/delete the <code>Meshes</code> folder after installing.
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/37947">Plant life Retexture</a> - High-res retextures for various plants. After installing, hide/delete <code>Tx_marshmerrow_03.dds</code>.
+	<li><a href="http://mw.modhistory.com/download-56-11998">Underwater Static Replacer</a> - Replaces several underwater objects. Hide/delete the <code>meshes</code> folder after installing.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/43605">Better Barnacles</a> - High res barnacle retexture.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/46180">Epic Plants</a> - Our primary plant replacer. New meshes and textures for nearly all flora in the game.
+		<ul>
+			<li>Download all main files except for <code>HQ Ash Yam</code> and <code>HQ Corkbulb</code>, then download the <code>Lichen</code> miscellaneous file.
+			<li><a href="https://drive.google.com/open?id=1m4XLI0IjH59ntdKfRHBExEMIpzUKcuF_">GH Epic Plants</a> - If you're using Graphic Herbalism, you'll also want to download this. Made by Stuporstar.
+		</ul>
+	<li>For the giant Emperor Parasol mushrooms, there's two options. Only choose one:
+		<ol>
+			<li><a href="https://www.nexusmods.com/morrowind/mods/46347">Epic Trees</a> -Improved meshes and textures for emperor parasol mushrooms. Vanilla-friendly.
+			<li><a href="https://www.nexusmods.com/morrowind/mods/45350">Mushroom Tree Replacer</a> - Reimagined appearance for emperor parasols. Only download the main file. These look really nice, but they're smaller and differently shaped than vanilla, which can cause issues with mod locations that use these mushrooms.
+		</ol>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/43528">Dahrk Mods by Melchior</a> - Optional; you can download the <code>Parasol Particles</code> file if you want spores to fall from emperor parasols.
+		<ul>
+			<li>When installing, check <code>Core</code>. If you're using <code>Epic Trees</code>, check <code>SWG's Replacer</code>. If you're using <code>Mushroom Tree Replacer</code>, check <code>PeterBitt's Replacer</code>.
+		</ul>
+	<li><a href="http://mw.modhistory.com/download-44-14321">Glowing Bitter Coast</a> - Adds glowing textures to certain plants in the Bitter Coast region.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/45639">Bungler's Bane and Hypha Facia HD</a> - Replacers for two common types of mushrooms.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/45463">Lily Pad Replacer</a> - Replaces the lily pads found in the Bitter Coast and Mournhold. Download only one of the main files.
+	<li><a href="https://drive.google.com/open?id=1sMtfhAANJhrprrBlmZSVwdTteziyxEQJ">Vurt's Chokeweed and Roobrush</a> - Replacers for two plants that Epic Plants doesn't cover. Originally part of Vurt's Leafy West Gash II. Also includes an improved bridge rope texture from that mod.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/43555">Improved Kwama Eggs and Egg Sacs</a> - Mesh and texture replacers for kwama eggs.
+		<ul>
+			<li>Check <code>Data Files</code> for the base replacer, and <code>Pulsing animation</code> to add a new animation to the egg sacs. You can also check the bump mapped options, if you want bump maps. Don't check the Graphic Herbalism patches.
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/42586">Comberry Bush and Ingredient Replacer</a> - New meshes and textures for Comberry bushes. Only check <code>Data Files</code> when installing.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/45517">Hanging Vines Replacer</a> - Improved meshes for the vines found in caves and the Bitter Coast. Hide/delete the <code>Textures</code> folder after installing.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/46599">Graphic Herbalism - MWSE and OpenMW Edition</a> - Download the <code>GH Patches and Replacers</code> optional file. Only needed if you're using Graphic Herbalism.
+		<ul>
+			<li>Check <code>Correct UV Ore + README</code>, <code>Pherim's Replacers</code>, <code>Vurt's Chokeweed & Roobrush</code>, <code>Atlas - Smoothed Glowmap Patch</code>, <code>Remiros shelf fungus</code>, and <code>Apel's Azura's Coast</code>.
+			<li>If you enabled the pulsing animation for kwama egg sacs, check <code>Pherim Pulsing Kwama</code> (or <code>Pherim Pulsing Kwama Reflect</code>, if you enabled the bump mapped version).
+			<li>After installing, you'll need to remove one of the included .esp files. If you want ore veins in mines to respawn, hide/delete <code>correctUV Ore Replacer_fixed.esp.</code> If you don't, hide/delete <code>correctUV Ore Replacer_respawning.esp</code>.
+		</ul>
+</ul>
+
+<h3>Solstheim</h3>
+
+<ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/46810">Vvardenfell and Solstheim Worldspace Remaster</a> - This mod package has a LOT of content, but the main reason it's in this part of the guide is because of its new meshes and textures for Solstheim. Download the main file.
+		<ul>
+			<li>Keep 00 checked.
+			<li>If you want to use the <code>Solstheim Tomb of the Snow Prince</code> landscape overhaul, check 01-0.
+			<li>Check 01-1. This graphical replacer replaces nearly everything on Solstheim with better meshes and textures.
+			<li>If you want lighter grey rocks on Solstheim, check 01-2. You can see a comparison of these rock textures in the mod's screenshots. I prefer the darker ones from the graphical replacer.
+			<li>Check 03-2.
+			<li>Leave everything else unchecked for the time being.
+		</ul>
+</ul>
+
+<h3>Waterfalls</h3>
+
+<ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/45424">Better Waterfalls</a> - New effects and textures for waterfalls.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/46271">Waterfalls Tweaks</a> - Resizes waterfall splashes to better fit Better Waterfalls. Only download <code>Waterfalls Tweaks - Magic blue lights untouched</code>.
+</ul>
+	
+<h3>Landscapes</h3>
+
+<ul>
+	<li><a href="http://www.fullrest.ru/files/connaryscaves/files">Connary's Landscapes - Caves</a> - Retextures all of Morrowind's caves.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/45953">Vanilla Land</a> - Replaces all landscape textures in the game with new high-res, vanilla friendly textures. After installing, move the <code>_land_default.dds</code> texture from the <code>Optional</code> folder into the main <code>Textures</code> folder.
+		<ul>
+			<li><a href="https://www.nexusmods.com/morrowind/mods/47266">Ellie's Mystic Minimods</a> - Download the <code>Vanilla Land - tx_ma_crackedearth Fix</code> file. Fixes a texture from the above mod.
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/45673">Swamp Rocks</a> - Improved textures for rocks in the Bitter Coast. Download the <code>Swamp Rocks - Brown</code> file, set the <code>Swamp Rocks 2048x2048</code> folder as the data directory.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/46140">Dangerous Lava and Oil by Articus</a> - Replaces the lava found around Morrowind, as well as the oil in the Clockwork City. Download the main file.
+		<ul>
+			<li>If you want an additional burning effect to be added while you're standing in lava, you can download one of the Lava and Oil Visual Damage optional files.
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/45802">Scummy Scum</a> - Better textures for Bitter Coast pond scum. Hide/delete the <code>Meshes</code> folder after installing.
+</ul>
+
+<h1>Atmosphere</h1>
+
+<p>There's two pretty good options for sky and weather replacers.
+<ol>
+	<li>Skies .IV
+		<ul>
+			<li><a href="https://www.nexusmods.com/morrowind/mods/43311">Skies .IV</a> - A total overhaul for Morrowind's skies and weathers. Download the main file. When installing, check <code>Particles</code> and <code>Skies - .IV</code>
+			<li><a href="https://www.nexusmods.com/morrowind/mods/45718">Lorkhan's Lunar Legacy</a> - HD vanilla-style moons. Download the LLL - Optimal HD pack file. Optional, as the moons from MWGigapixel already look nice.
+			<li><a href="https://www.nexusmods.com/morrowind/mods/42555">Apel's Rain Replacer</a> - Replaces rain weather effects.
+			<li><a href="https://www.nexusmods.com/morrowind/mods/46153">Performance Snowing</a> - Retextures snow and weather effects. Hide/delete <code>tx_bm_blizzard_01.dds</code> after installing.
+		</ul>
+	<li>Alternate Skies
+		<ul>
+			<li><a href="https://www.nexusmods.com/morrowind/mods/43311">Skies .IV</a> - A total overhaul for Morrowind's skies and weathers, but we won't be using most of it. Only download and install the <code>Skies .IV Resource Pack</code> from optional files.
+			<li><a href="https://www.nexusmods.com/morrowind/mods/42629">Alternate Skies</a> - This is the main sky retexture we'll actually be using. Only download the file just named <code>Alternate Skies</code>.
+			<li><a href="https://www.nexusmods.com/morrowind/mods/45024">Galaxy Night Sky .iv</a> - An improved night sky texture. When installing, create a directory named <code>Textures</code>, and move <code>Tx_Stars.dds</code> inside of it.
+			<li><a href="https://www.nexusmods.com/morrowind/mods/45718">Lorkhan's Lunar Legacy</a> - HD vanilla-style moons. Download the LLL - Optimal HD pack file. Optional, as the moons from MWGigapixel already look nice.
+			<li><a href="https://www.nexusmods.com/morrowind/mods/42555">Apel's Rain Replacer</a> - Replaces rain weather effects.
+			<li><a href="https://www.nexusmods.com/morrowind/mods/42555">Performance Snowing</a> - Retextures snow and weather effects. Hide/delete <code>tx_bm_blizzard_01.dds</code> after installing.
+		</ul>
+</ol>
+
+<p>After installing all of our sky mods, there's some .ini changes we'll need to make for our skies to look right. Open MO2's INI Editor and copy/paste <a href="https://drive.google.com/open?id=11zlEBO9-W21c6t0Pf-j6m8nqewIykwoD">these settings</a> into your ini, replacing the default weather settings. Note that the Snow and Blizzard weather settings will most likely be seperate from the rest, since they were added by Bloodmoon.</p>
+
+<h1>Architecture</h1>
+
+<h3>Imperial</h3>
+
+<ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/43940">Imperial Houses and Forts Retexture - Ordo Arkitektora</a> - Our main texture replacer. Replaces all Imperial building architecture textures. Download the HQ file.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/43520">Shacks Docks and Ships - Arkitektora of Vvardenfell</a> - Replaces textures for shacks, docks, and ships. Download the HQ file.
+	<li><a href="http://mw.modhistory.com/download-56-13799">Ebonheart Dragon Statue Retexture</a> - HD textures for the dragon statue seen in Ebonheart.
+		<ul>
+			<li><a href="https://www.dropbox.com/s/0ujcef7yrwhqzr7/ImperialDragonStatue_ATL.zip?dl=0">Imperial Dragon Statue ATL</a> - A Project Atlas texture for the above mod. Made by Bubishi. When installing, set the <code>ImperialDragonStatue_ATL</code> folder as the data directory.
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/42532">Apel's Lighthouse Retexture</a> - Replaces the unique lighthouse in Seyda Neen. Download the <code>Apel lighhouse retexture v2</code> file.
+</ul>
+
+<h3>Hlaalu</h3>
+
+<ul>
+	<li>There's multiple good options for Hlaalu retextures.
+		<ol>
+			<li><a href="https://www.nexusmods.com/morrowind/mods/46009">Aesthesia - Hlaalu textures</a> - Replaces all Hlaalu architecture textures. Vanilly friendly, handpainted style. Download the main file.
+				<ul>
+					<li>Hide/delete <code>tx_wood_weathered_rings.dds</code> and <code>tx_wood_wethered.dds</code> after installing.
+				</ul>
+			<li><a href="https://www.nexusmods.com/morrowind/mods/46246">Hlaalu - Arkitektora Vol.2</a> - Replaces all Hlaalu building architecture textures. These textures generally look somewhat flatter/less worn than Aesthesia/vanilla's. Download the <code>Buildings HQ</code> and the <code>ATLAS HQ</code> files.
+				<ul>
+					<li>If you decide to use this mod, you should download <code>Aesthesia - Hlaalu textures</code> anyway for a few textures; <code>Tx_metal_strip_01.dds</code> and <code>Tx_metal_strip_02.dds</code>. You can delete the rest of the mod's files.
+				</ul>
+		</ol>
+</ul>
+
+<h3>Redoran</h3>
+
+<ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/46235">Redoran - Arkitektora Vol.2</a> - Replaces all Redoran architecture textures. Download the <code>Buildings HQ</code> and the <code>ATLAS HQ</code> files. If you're using Tamriel Rebuilt, also download the <code>Redoran Arkitektora for Tamriel Rebuilt - HQ</code> file.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/43266">RR Mod Series - Better Meshes</a> - Download the <code>RR - Better Redoran Architecture</code> file. 
+		<ul>
+			<li>Check <code>Atlas</code>, <code>Better Aldruhn-under-Skar</code>, and <code>Better Aldruhn-under-Skar HD</code>.
+			<li>If you're using Glow in the Dahrk, check <code>Atlas GITD Patch</code>.
+			<li>This mod will install two .esp files; an English version, and a Russian one. Hide/delete whichever one you don't need.
+		</ul>
+</ul>
+
+<h3>Telvanni</h3>
+
+<ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/42343">Telvanni Mesh Improvement</a> - Heavily improved meshes for many Telvanni architecture meshes.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/43530">Telvanni - Arkitektora of Vvardenfell</a> - Replaces all Telvanni architecture textures. Download the HQ file.
+		<ul>
+			<li><a href="https://www.nexusmods.com/morrowind/mods/43795">Various tweaks and fixes</a> - Download the <code>Tyddys Telvanni Fixes</code> file. Check <code>Fixed meshes</code>, <code>Fixed textures 2k</code>, and <code>Telvanni Mesh Improvement compatibility patch</code> when installing.
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/43232">Telvanni Fireplace Replacer</a> - Replaces the mesh for Telvanni fireplaces.
+</ul>
+
+<h3>Vivec & Velothi</h3>
+
+<ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/46266">Vivec and Velothi - Arkitektora Vol.2</a> - Our main replacer for all Velothi architecture textures. Download the HQ file and the Atlas HQ file.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/43144">Sewers - Arkitektora of Vvardenfell</a> - Replaces the textures in sewers. The user images section shows comparisons between the clean and dirty versions; whichever you choose, download the HQ version.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/21377">Set in Stone</a> - Retextures many different statues.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/42921">Ministry of truth Bump mapped</a> - A retexture for the Ministry of Truth. If you don't want bump maps, hide/delete the <code>meshes</code> folder.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/43316">Concept Art Ghostfence Replacer</a> - New design for the pillars of the Ghostfence. Optional, as these are a big departure from vanilla.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/44962">Ghostfence - Writing on the Wall</a> - New appearance and sounds for the Ghostfence. Optional, as it's a notable departure from vanilla.
+		<ul>
+			<li>Download only one file; the main file colors the fence blue and red, while the alternate file is mostly blue. The alternate file is closer to vanilla's look.
+		</ul>
+</ul>
+
+<h3>Dwemer Ruins</h3>
+
+<ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/43101">Dwemer Mesh Improvement</a> - Improved meshes for many dwemer ruin assets.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/44264">Full Dwemer Retexture</a> - A complete retexture for all Dwemer assets. For now, just download the <code>Only Architecture HQ</code> file.
+</ul>
+
+<h3>Daedric Ruins</h3>
+
+<ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/46044">Daedric Intervention - Ruins</a> - A complete set of replacers for Daedric content. For now, only download the <code>Ruins - Daedric Intervention</code> file.
+</ul>
+
+<h3>Dunmer Strongholds</h3>
+
+<ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/46445">Aesthesia - Stronghold textures</a> - Replaces all Dunmer stronghold textures. Download the 2k version.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/46070">Propylon HD</a> - Replaces the propylons found within Dunmer strongholds.
+</ul>
+
+<h3>Sixth House</h3>
+
+<ul>
+	<li><a href="https://drive.google.com/open?id=1rA3r_p5VdVo1o6SIsxufvpV_GJeixSEv">Articus 6th House Dagoth Retexture 2K</a> - Retextures for all Sixth House objects and structures.
+</ul>
+
+<h3>Mournhold</h3>
+
+<ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/46011">Articus Mournhold 2K Retexture</a> - Replaces all Mournhold architecture textures.
+		<ul>
+			<li>If you're using Mournhold Flora Redux, install this mod a second time, this time setting the <code>Mournhold Flora Redux retexture</code> optional folder as the data directory.
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/45769">Articus Old Mournhold and Sewers Retexture 2K</a> - Replaces the textures of Old Mournhold and Mournhold's sewers. Ignore the mod requirements when downloading.
+</ul>
+
+<h3>Clockwork City</h3>
+
+<ul>
+	<li>There's two options for Clockwork City retextures, only choose one.
+		<ol>
+		<li><a href="https://www.nexusmods.com/morrowind/mods/46149">Articus Clockwork City of Sotha Sil 2K Retexture</a> - High res, vanilla-friendly Clockwork City textures.
+		<li><a href="https://www.nexusmods.com/morrowind/mods/38369">Clockwork City Reborn</a> - Clockwork City textures with an art deco influence. Much less vanilla-friendly, but in my opinion they look way better.
+			<ul>
+				<li>Hide/delete <code>textures/tx_fabricant_hulking.dds</code>, <code>tx_hot_oil.dds</code>, tx_oil_crust.dds, and <code>textures/tx_sotha_sil_var1.dds</code> after installing.
+			</ul>
+		</ol>
+</ul>
+		
+<h3>Raven Rock</h3>
+
+<ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/45545">Raven Rock HD</a> - HD textures for the Solstheim settlement of Raven Rock.
+</ul>
+
+<h3>Miscellaneous</h3>
+
+<ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/43348">RR Mod Series - Morrowind Statues Replacer</a> - Model and texture replacers for statues of Vivec and Azura.
+		<ul>
+			<li>Check <code>Azura Stone</code>, <code>Vivec Statues</code>, and one of the <code>Vivec Statues Coda Fix</code> options during installation.
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/28311">Road Marker retextured</a> - Replaces the textures for the "Welcome" obelisk found outside some cities. When installing, create a directory named <code>Textures</code>, and move the .dds files into it.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/21405">Banners retextured</a> - Replaces many of the ingame banners. A lot of these will be replaced by newer mods, but it's a good base.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/41658">Arukinns Better Banner Signs and Signposts</a> - Replacers for many banners, signposts, and roadsigns.
+		<ul>
+			<li><a href="https://www.nexusmods.com/morrowind/mods/46237">Arukinn-style signposts for Tamriel Rebuilt</a> - If you're using Tamriel Rebuilt, this addon will change its roadsigns to match Arukinn's.
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/47266">Ellie's Mystic Minimods</a> - Download the <code>Imperial Door Fixes</code> file. Check all 3 options when installing.
+</ul>
+
+<h1>Miscellaneous</h1>
+
+<h3>Books</h3>
+
+<ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/43100">Arukinns Better Books and Scrolls</a> - Texture replacers for all books, scrolls, and notes.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/45626">Melchior's Magnificent Manuscripts</a> - Mesh replacers for all books and scrolls. Only check <code>Core</code> when installing.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/40967">Dwemer Plans and Schematics</a> - New textures for the schematics that can be found in Dwemer ruins. Download the 1024 file.
+</ul>
+
+<h3>Containers</h3>
+
+<ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/32427">AOF Containers</a> - Texture and mesh replacers for several different containers. Hide/delete <code>meshes\m\misc_com_bucket_01.nif</code>.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/45299">Better Crates</a> - HD crate textures.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/42558">Apel's Various Things - Sacks</a> - Texture and mesh replacers for sacks. Only download one of the main files.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/43541">Dunmeri Urns - Aestetika of Vvardenfell</a> - HD retexture for Dunmeri urns and planters. Download the HQ main file.
+		<ul>
+			<li>Hide/delete the <code>meshes</code> folder after installing.
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/45383">Nordic Chest Replacer</a> - New model and texture for the chests found in Nordic barrows.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/46674">Baskets</a> - Replaces the models and textures of various baskets.
+		<ul>
+			<li><a href="https://www.nexusmods.com/morrowind/mods/47266">Ellie's Mystic Minimods</a> - Download the <code>Baskets - Texture Filtering Fix</code> file. A fix for the above mod.
+		</ul>
+</ul>
+
+<h3>Furniture</h3>
+
+<ul>
+	<li><a href="http://download.fliggerty.com/download--1108">Illy's Bedspreads</a> - Texture replacers for all bedspeads.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/36872">Django's Rugs and Tapestries</a> - Base texture replacer for rugs and tapestries.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/22551">Detailed Tapestries</a> - Texture replacers for all tapestries.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/23986">Detailed Rugs v2</a> - Texture replacers for all rugs. When installing, create a directory named <code>Textures</code>, and move the .dds files into it.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/45127">Ket's Swirlwood Furniture retexture</a> - Texture replacers for fine Dunmer furniture.
+	<li><a href="https://drive.google.com/open?id=1TDm8TUkvw2To5HWEHY9lAUnKMslZcBs2">AOF Imperial Counters Fixed</a> - Texture replacers for a set of Imperial countertops. Textures are from AOF's Imperial Housing Retextured V2, I only fixed their mipmaps.
+		<ul>
+			<li><a href="https://www.nexusmods.com/morrowind/mods/43528">Dahrk Mods by Melchior</a> - Download the <code>AOF Imperial Housing - Bar Fix_1.0</code> file. An additional texture to match the above mod.
+			<ul>
+				<li>When installing, create a directory named <code>Textures</code>, and move the .dds file into it.
+			</ul>
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/47266">Ellie's Mystic Minimods</a> - Download the <code>Improved Visual Pack Hutch</code> file. Improves some more counter textures.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/19465">Bloodmoon Pelt Replacer BPR</a> - New textures for the animal pelts found on Solstheim.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/21725">Bloodmoon Hide Replacer BHR</a> - New textures for the animal hides found on Solstheim.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/46738">HD Forge</a> - New meshes and textures for blacksmith forge objects.
+		<ul>
+			<li>When installing, check <code>Data Files</code>, <code>Distant Land Forge Mesh</code>, and <code>Optional Texture for Glowing Ash</code>.
+			<li>If you want animated bellows (there's a video showing them off on the mod page), then check <code>Optional Animated Bellows</code>. If you want animated bellows that also have a new sound to match their animation, check <code>Optional Animated Bellows with Sound</code>. Note that if using the version that adds sound, there may be incompatibilities with any mods that change the locations of bellows or add new ones.
+		</ul>
+	<li><a href="http://mw.modhistory.com/download-56-15375">HiRez Heraldry</a> - New textures for the heraldry found in many Imperial buildings.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/45449">HQ Bug Shells</a> - Retextures for ashlander bug shells. Only download the <code>Vanilla color tweak</code> optional file.
+</ul>
+
+<h3>Lanterns</h3>
+
+<ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/43219">Dunmer Lanterns Replacer</a> - Replaces all lantern meshes with more detailed versions. Check <code>Core</code> and one of the <code>Ashlander Lanterns Retexture</code> files (I recommend No. 1).
+	<li><a href="https://www.nexusmods.com/morrowind/mods/45258">Erikaimar's Paper Lanterns Remastered</a> - HD paper lantern textures.
+</ul>
+
+<h3>Effects</h3>
+
+<ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/37072">FIMs Better Spell Effects</a> - New, vanilla-style replacers for many magic effects.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/43380">Magic Diversity</a> - New visuals for all magic effects. Optional; these effects are very high-res and well done, but they're more of a departure from vanilla and as such may not be to everyone's tastes.
+		<ul>
+			<li>Download the main file and the <code>Vanilla sounds</code> file. Hide/delete <code>Magic Diversity 1.0.ESP</code> from the main file.
+			<li>If you don't want shield effects to appear in front of the player and potentially block vision, download the <code>Options for Shields</code> file and set the <code>No Floating Shields</code> folder as the data directory.
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/33426">Better Blood Morrowind</a> - Texture replacer for blood.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/43359">Skeleton and Metal Sparks blood retexture</a> - Texture replacers for the effects used in place of blood for skeletons and Dwemer automatons.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/42554">Apel's Fire Retexture</a> - Replaces fire effects with a high res texture.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/28519">Vurt's Lava and Smoke</a> - Our replacer for smoke effects. Only check <code>Smoke</code> when installing.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/44322">Mist Retexture</a> - Only download the mist retexture file. More detailed mist effects for ancestral tombs.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/46379">Articus Various Retextures</a> - Only download <code>Water Pools HD</code>. Improved textures for the water pools found in caves.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/44509">Improved Propylon Particles</a> - Replaces the waving beams of light found around propylons with a totally new effect. Optional, as it's a major departure from vanilla.
+</ul>
+
+<h3>Ingredients</h3>
+
+<ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/19467">Soulgem Ingredient Retexture SIR</a> - Retextures many of Morrowind's alchemy ingredients. Download the <code>SIR_TBandBM_v3</code> file.
+		<ul>
+			<li>After installing, hide/delete <code>textures/tx_bm_stalhrim_01.dds</code> and <code>textures/tx_powder_ashsalts_01.dds</code>.
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/44067">Ingredients Mesh Replacer</a> - Improved meshes for many alchemy ingredients.
+		<ul>
+			<li>Install this mod twice; select <code>Data Files</code> as the directory for the first installation, and then select the <code>Alaisiagae's Textures</code> compatibility patch folder as the data directory for the second.
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/43387">Crabmeat ingredient replacer</a> - Gives the crabmeat ingredient a much nicer model and texture.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/45339">R-Zero's Throbbing Meat - a Corprus Meat Replacer</a> - Gives the Corprusmeat ingredient a new, animated model.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/46044">Daedric Intervention - Ingredients</a> - Download the Daedric Intervention - Ingredients file.
+</ul>
+
+<h3>Objects & Clutter</h3>
+
+<ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/45972">Clutter Retexture</a> - Retextures a ton of different clutter objects. Download the All-in-One file and the Update file.
+		<ul>
+			<li>Hide/delete <code>Tx_item_pot_mottled_01.dds</code>, <code>Tx_kwamaegg_gold_01.dds</code>, <code>Tx_light_buglamp_side.dds</code>, and all five <code>Tx_metal_silver</code> textures from the main file.
+			<li>When installing the update file, only check <code>Bamboo</code> and <code>Cork</code>.
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/46012">Improved Better Skulls</a> - Replaces skulls and bones with much higher quality versions. Download and install both the main file and the Skeletons Atlased file.
+		<ul>
+			<li>When installing the main file, check <code>Data Files</code> and <code>Fixed Skeletons</code>.
+			<li>When installing Skeletons Atlased, only check <code>Improved Better Skulls Textures</code>.
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/1634">Septim Gold and Dwemer Dumacs</a> - Replaces gold and Dwemer coins with much improved versions. Download the main 7.5 file.
+	<li><a href="https://download.fliggerty.com/download--1054">Illy's Hot Pots</a> - New meshes and textures for calcinators and retorts.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/46385">Silverware Repolished</a> - Improved meshes and textures for silverware items. Download the main file and the Glowing Flames compatibility patch.
+		<ul>
+			<li>When installing the main file, only check <code>Data Files</code>.
+			<li>When installing the Glowing Flames compatibility patch, only check <code>Vanilla MW and OpenMW</code>.
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/43935">Long Live The Plates - Retexture</a> - HD textures for plates.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/44016">Long Live The Glassware - Retexture</a> - HD textures for glassware and some other glass objects.
+		<ul>
+			<li>After installing, hide/delete <code>textures/Tx_metal_strip_02.dds</code>.
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/44045">Long Live The Limeware - Retexture</a> - HD textures for limeware.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/44781">Ket's Potions and Beverages Retexture</a> - Higher res textures for all potions and drinks.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/46023">Remiros' Alcohol HD</a> - New models and textures for Morrowind's alcohol.
+	<li>There's two options for soul gem replacers, only download one;
+		<ul>
+			<li><a href="http://tesalliance.org/forums/index.php?/files/file/1397-insanitys-soul-gem-replacer/">Insanity's Soul Gem Replacer</a> - New, vanilla-friendly models and textures for soul gems. You'll need a TES Alliance account to download this file.
+			<li><a href="https://www.nexusmods.com/morrowind/mods/44117">Soulgem Replacer</a> - New models and textures for soul gems, giving them a style closer to Skyrim while remaining mostly vanilla-friendly.
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/46627">Azura's Star HD</a> - New model and texture for the Azura's Star artifact.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/45006">Dwemer Puzzle Box Replacer</a> - New model and texture for the Dwemer Puzzle Box artifact. Download the Vanilla file.
+</ul>
+
+<h3>Miscellaneous</h3>
+
+<ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/30696">Vurt's Silt Strider Retexture</a> - HD retexture for Silt Striders.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/46479">Skiff Boat Texture Replacer</a> - A new texture for small skiff boats.
+	<li><a href="http://www.fullrest.ru/files/connaryswebs/files">Connary's Webs</a> - Retextures cobwebs.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/44255">Flash's Minor Mods</a> - Several different replacers. Download Imperial Altar Replacer and Skeleton Key HD.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/44025">R-Zero's Random Retextures and Replacers</a> - Several different replacers. Download Chimney Smoke, Iron Towershield, and Quill.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/39122">Papill6n various graphics things</a> - Quite a few assorted replacers. Install as a BAIN installer, and check the following:
+		<ul>
+			<li>Awning woven
+			<li>Bellow and canvaswrap
+			<li>Kneeling stool
+			<li>Loom
+			<li>Ropes woven + hammock's pillow
+			<li>Siltstrider
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/47266">Ellie's Mystic Minimods</a> - Download the <code>Seamless Papill6n Bedrolls</code> and <code>Vurt's Silt Strider Husks</code> files. A seamless texture for bedrolls, and a retexture for the silt strider husks found in the Ashlands.
+</ul>
+
+<h3>Atlases</h3>
+
+<ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/47123">Atlas Texture Collection</a> - Some atlas textures for mods that don't include them.
+		<ul>
+			<li>When installing, check <code>Emperor Parasols</code>, <code>Imperial</code>, <code>Redoran (RR Version)</code>, and <code>Wood Poles</code>.
+		</ul>
+	<li><a href="https://drive.google.com/open?id=1fRQMl-OCJ_UsynNwYgGj9610Pz-tYqWX">Masterguide Atlas Set</a> - Atlas textures for everything not covered already.
+</ul>
+
+<h1>Creatures</h1>
+
+<h3>VFX Restoration</h3>
+
+<ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/46194">Creature VFX Restoration</a> - Fixes broken visual effects for many of Morrowind's creatures.
+		<ul>
+			<li>Hide/delete <code>XAncestorGhost.nif</code> after installing.
+		</ul>
+</ul>
+
+<h3>Connary's Bestiary</h3>
+
+<ul>
+	<li><a href="https://www.fullrest.ru/files/connarysancestorghost">Connary's Bestiary - Ancestor Ghost</a> - New textures for Dunmer ancestor ghosts.
+	<li><a href="http://www.fullrest.ru/files/connarysbonelord/files">Connary's Bestiary - Bonelord</a> - New textures for Bonelords.
+	<li><a href="http://www.fullrest.ru/files/connarysbonewalker/files">Connary's Bestiary - Bonewalker</a> - New textures for Bonewalkers.
+	<li><a href="http://www.fullrest.ru/files/connaryslamecorprus/files">Connary's Bestiary - Lame Corprus</a> - New textures for Lame Corprus.
+	<li><a href="http://www.fullrest.ru/files/connaryslichking/filess">Connary's Bestiary - Lich King</a> - New textures for Barilzar, the Lich King.
+	<li><a href="http://www.fullrest.ru/files/connarysslaughterfish/files">Connary's Bestiary - Slaughterfish</a> - New textures for Slaughterfish.
+</ul>
+
+<h3>Animals</h3>
+
+<ul>
+	<li>For mudcrabs, we have two options. Only choose one.
+		<ol>
+			<li><a href="https://www.nexusmods.com/morrowind/mods/42130">Correct UV Mudcrabs</a> - A vanilla friendly mudcrab mesh replacer that improves the appearance of the default mudcrabs. Set the <code>Data Files</code> folder within <code>Smoothed</code> as the data directory.
+			<li><a href="https://www.nexusmods.com/morrowind/mods/46765">Mudcrab Replacer</a> - A complete visual overhaul for mudcrabs, giving them an awesome new look, but less vanilla friendly as a result. Only download the main file.
+		</ol>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/42521">Guars replacer - Aendemika of Vvardenfell</a> - New model and textures for guars.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/42523">Kagouti replacer - Aendemika of Vvardenfell</a> - New model and textures for kagoutis.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/42520">Alit replacer - Aendemika of Vvardenfell</a> - New model and textures for alits.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/43925">Cliffracer Replacer</a> - New model and textures for cliff racers.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/43620">Nix-Hound Replacer</a> - New model and textures for nix hounds.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/46823">Shalk Creature Replacer PBR</a> - New model and textures for shalks. Set the <code>Data Files</code> folder within <code>Black variant</code> as the data directory.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/46421">HiRez Creatures - Netch</a> - New models and textures for netches.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/43330">Various little mods</a> - Download <code>Kwama forager bump mapped</code>. Hide/delete the <code>Meshes</code> folder after installing.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/44150">Silt Strider Animation Restored</a> - Restores an unused idle animation for Silt Striders.
+</ul>
+
+<h3>Humanoids</h3>
+
+<ul>
+	<li><a href="https://download.fliggerty.com/download-127-749">Unique Corprus Stalkers</a> - Redesigns corprus stalkers, additionally introducing many variants of them so that they aren't all identical.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/43633">Ash Vampire Reworked</a> - New model and texture for ash vampires.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/45617">Better Dwarven Spectres - Mer and Maidens Edition</a> - Improves the appearance of dwarven spectres, as well as introducing female variants.
+		<ul>
+			<li>After installing, hide/delete all but one of the mod's .esp files. The mod description explains the differences between each version.
+			<li><a href="https://www.nexusmods.com/morrowind/mods/47266">Ellie's Mystic Minimods</a> - Download the <code>Better Dwarven Spectres - AI-Enhanced</code> file. AI upscaled texture from Better Dwarven Spectres, made to more closely match Morrowind Enhanced Textures.
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/43350">Spriggans and Twiggans</a> - A model and texture replacer for Spriggans and their Heartwood ingredients.
+		<ul>
+			<li>Check <code>Data Files</code>.
+			<li>If you don't want spriggans to glow or have fireflies surrounding them, check <code>No Glow</code> or <code>No Glow No Flies</code>.
+			<li>If you want Heartwood to have a more reasonable drop rate, check <code>Heartwood Fix</code>.
+			<li>If you want to add a male equivalent to spriggans, check <code>Twiggans</code>, and/or <code>Twiggan Groot</code> to add a unique male spriggan named Groot.
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/43277">Skyrim-like Draugr Eyes</a> - Optional. If you want Draugr eyes to glow blue (like in Skyrim) instead of red, you can get this.
+</ul>
+
+<h3>Daedra</h3>
+
+<ul>
+	<li><a href="https://download.fliggerty.com/download-127-743">Unique Winged Twilights</a> - New models and textures for winged twilights, including some new variants for unique ones.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/44314">Scamp Replacer</a> - New model and texture for scamps. Download the main <code>Scamp Replacer 1.0</code> file for non-glowing eyes, or the <code>Glowing Eyes</code> file if you want Scamps to have glowing eyes. You only need one.
+		<ul>
+			<li>The <code>Creeper Replacer</code> optional file gives the unique scamp Creeper a unique mesh. It adds two .esp files; an English one, and a German one. Hide/delete whichever one you don't need.
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/45173">Clannfear Replacer</a> - New model and texture for clannfears. Download the main <code>Clannfear Replacer</code> file for non-glowing eyes, or the <code>Glowing Eyes</code> file if you want Clannfears to have glowing eyes. You only need one.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/46044">Daedric Intervention</a> - Download the Creatures file. Model and texture replacers for many different daedra.
+		<ul>
+			<li>We'll want to install this mod multiple times, selecting a different Daedra's folder as the data directory each time. Do this for <code>Atronachs</code>, <code>Daedroth</code>, <code>Dremora</code>, <code>Golden Saint</code>, <code>Hunger</code>, and <code>Ogrim</code>.
+			<li><a href="https://www.nexusmods.com/morrowind/mods/47266">Ellie's Mystic Minimods</a> - Download the <code>Daedric Intervention - Vanilla-Style Creatures</code> file. More vanilla-friendly textures for Hungers and Daedroth, and less crosseyed Ogrims.
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/46026">Various Retextures</a> - Download the <code>Atronachs Particles</code> file. Replaces the particle effects of atronachs. Check both options when installing.
+</ul>
+
+<h3>Gods</h3>
+
+<ul>
+	<li>For Vivec, there's several good options for replacers. Only choose one.
+		<ol>
+			<li><a href="https://www.nexusmods.com/morrowind/mods/46498">HiRez Creatures - Vivec</a> - Inspired by Vivec's vanilla appearance and concept art. This is the most vanilla friendly replacer.
+			<li><a href="https://www.nexusmods.com/morrowind/mods/46342">Divine Vivec</a> - Inspired by concept art, with many artistic liberties taken.
+			<li><a href="https://www.nexusmods.com/morrowind/mods/43898">Femme Vehk Replacer</a> - A redesign making Vivec appear more feminine, inspired by several of Vivec's sermons as well as some concept art.
+		</ol>
+	<li>There are two options I can recommend for replacing Azura. Only choose one.
+		<ol>
+			<li><a href="https://www.nexusmods.com/morrowind/mods/44492">Prince of Moonshadow - Azura Creature and Cinematic Replacer</a> - This mod redesigns Azura with a new model and textures, and additionally, it includes an HD replacer for Morrowind's ending cutscene (hence why the filesize is so large).
+				<ul>
+					<li>You can ignore the mod's listed requirements when downloading. After installing, go into the <code>Video</code> folder and rename the file with the correct aspect ratio for your monitor <code>mw_end.bik</code>. I would then recommend deleting the other 2 video files, as they aren't neccessary and take up a lot of space.
+					<li><a href="https://www.nexusmods.com/morrowind/mods/45379">Azura Prince of Moonshadow - fixed</a> - You'll also want to download this patch, it contains several fixes and improvements.
+				</ul>
+			<li><a href="http://mw.modhistory.com/download-45-6053">Azura Replacer</a> - If you don't like the look of Prince of Moonshadow, this option is more faithful to vanilla. However, it won't replace the game's ending cutscene.
+		</ol>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/45039">Dagoth Ur's Divine Body</a> - New model and textures for Dagoth Ur.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/23388">Better Almalexia</a> - New model and textures for Almalexia. Hide/delete the <code>Splash</code> folder after installing.
+</ul>
+
+<h1>Characters</h1>
+
+<h3>Men & Mer</h3>
+
+<p>There's two pretty distinct options here for heads and bodies, you can compare the two head styles and decide which you prefer.</p>
+
+<ol>
+	<li>Westly's Style
+		<ul>
+			<li><a href="https://www.nexusmods.com/morrowind/mods/42395">Better Bodies ZW</a> - Replaces the models and textures of bodies. Hide/delete <code>Better Bodies.esp</code> after installing.
+			<li><a href="https://download.fliggerty.com/download-127-874">Westly's Pluginless Head and Hair Replacer</a> - An all-in-one replacer for the heads and hairs of all man and elf races.
+			<li><a href="https://www.dropbox.com/s/d70l2lbjvm0xloo/WestlyHeadsAnimFix.zip?dl=0">Westly's Heads Anim Fix</a> - Fixes some animation issues with Westly's head models. Made by Greatness7.
+			<li><a href="https://www.nexusmods.com/morrowind/mods/43795">Various tweaks and fixes</a> - Download <code>Better Bodies v3.0 Pluginless</code>, <code>Fixed Westlys Female Orc Heads</code>, and <code>WestlyBarenziahAnimFix</code>.
+		</ul>
+	<li>MacKom's Style
+		<ul>
+			<li>First, download all of MacKom's head replacer mods.
+				<ul>
+					<li><a href="https://www.nexusmods.com/morrowind/mods/42616">Altmers Redone</a> - Replacers for all High Elf heads.
+					<li><a href="https://www.nexusmods.com/morrowind/mods/43762">Bosmers Redone</a> - Replacers for all Wood Elf heads.
+					<li><a href="https://www.nexusmods.com/morrowind/mods/42758">Bretons Redone</a> - Replacers for all Breton heads.
+					<li><a href="https://www.nexusmods.com/morrowind/mods/43234">Dunmers Redone</a> - Replacers for all Dark Elf heads.
+					<li><a href="https://www.nexusmods.com/morrowind/mods/43087">Imperials Redone</a> - Replacers for all Imperial heads.
+					<li><a href="https://www.nexusmods.com/morrowind/mods/43470">Nords Redone</a> - Replacers for all Nord heads.
+					<li><a href="https://www.nexusmods.com/morrowind/mods/42640">Orsimer Redone</a> - Replacers for all Orc heads.
+					<li><a href="https://www.nexusmods.com/morrowind/mods/42853">Redguards Redone</a> - Replacers for all Redguard heads.
+				</ul> 
+			<li><a href="https://www.nexusmods.com/morrowind/mods/43795">Various tweaks and fixes</a> - Download the <code>Better Bodies meshes for MacKoms heads Fixed Pluginless</code> file. When installing, check either underwear or nude as well as the DE hand fix.
+			<li><a href="https://www.nexusmods.com/morrowind/mods/43573">Imperial Head 06 FIX - Races Redone - Imperials Redone - MacKom's Heads</a> - Fixes a texture error on one of MacKom's head models.
+			<li>And lastly, download all of the hair packs to match MacKom's heads.
+				<ul>
+					<li><a href="https://www.nexusmods.com/morrowind/mods/43153">Hair Pack for Altmers Redone</a> - Replacers for all High Elf hairstyles.
+					<li><a href="https://www.nexusmods.com/morrowind/mods/43152">Hair Pack for Bretons Redone</a> - Replacers for all Breton hairstyles.
+					<li><a href="https://www.nexusmods.com/morrowind/mods/43238">Hair Pack for Dunmers Redone</a> - Replacers for all Dark Elf hairstyles. Only download the 1.1 file.
+					<li><a href="https://www.nexusmods.com/morrowind/mods/43154">Hair Pack for Imperials Redone</a> - Replacers for all Imperial hairstyles.
+					<li><a href="https://www.nexusmods.com/morrowind/mods/43155">Hair Pack for Orsimer Redone</a> - Replacers for all Orc hairstyles.
+					<li><a href="https://www.nexusmods.com/morrowind/mods/43156">Hair Pack for Redguards Redone</a> - Replacers for all Redguard hairstyles.
+					<li><a href="https://www.nexusmods.com/morrowind/mods/43768">Hair Replacer for Nords and Bosmers Redone</a> - Replacers for all Nord and Wood Elf hairstyles. Download both main files.
+					<li><a href="https://www.nexusmods.com/morrowind/mods/47017">Races Redone - Hair Fix</a> - Various fixes and improvements to the hairs.
+				</ul> 
+		</ul>
+</ol>
+
+<h3>Beast Races</h3>
+
+<ul>
+	<li>First, we need a base body replacer. Only download one.
+		<ul>
+			<li><a href="http://mw.modhistory.com/download-10-11364">New Beast Bodies - Mature Version</a> - New bodies for Khajiit and Argonians.
+			<li><a href="http://mw.modhistory.com/download-10-10928">New Beast Bodies - Clean Version</a> - New bodies for beast races without nudity, if you're interested.
+			<li><a href="https://www.nexusmods.com/morrowind/mods/45988">RFD's small mods</a> - Download the <code>New Beast Bodies Argonian Hand Fix</code> file. When installing, check <code>NBB, or Wey, or IA 1.3 and earlier</code>.
+		</ul>
+	<li>We have two options for Argonians.
+		<ol>
+			<li><a href="https://www.nexusmods.com/morrowind/mods/43766">Wey's Argonians</a> - High quality replacer that reimagines Morrowind's Argonians based on the newer games, and is more of a departure from vanilla as a result.
+				<ul>
+					<li>Download the main file, and I also recommend the darker mouths file.
+					<li>This replacer requires the Mature version of New Beast Bodies.
+				</ul>
+			<li>If you don't want to use Wey's Argonians, then you don't need to download anything else; the argonian head textures included in MWGigapixel are already high quality.
+		</ol>
+	<li>There's two options for Khajiit, as well.
+		<ol>
+			<li><a href="https://www.nexusmods.com/morrowind/mods/44206">MacKom's Khajiit</a> - High quality replacer that redesigns Khajiit heads and bodies, and is somewhat of a departure from vanilla.
+				<ul>
+					<li>If using this mod, hide/delete <code>New Khajiit Bodies - Mature.esp</code> (or <code>New Khajiit Bodies - Clean.esp</code>) from New Beast Bodies.
+					<li>If you don't want nude body models, download the optional NonNude file and install it after the main file.
+				</ul>
+			<li><a href="https://www.nexusmods.com/morrowind/mods/43110">Pluginless Khajiit Head Pack</a> - High quality, very faithful to vanilla replacers for Khajiit heads.
+				<ul>
+					<li> Download only one of the main files.
+					<li><a href="https://www.nexusmods.com/morrowind/mods/43795">Various tweaks and fixes</a> - Download the <code>Pluginless Khajiit Head Pack - Vampires</code> file. Makes Khajiit vampire heads match the above mod.
+						<ul>
+							<li>When installing, check Textures as well as either <code>Vanilla</code> or <code>Whiskers Version</code>.
+						</ul>
+					<li><a href="http://abitoftaste.altervista.org/morrowind/index.php?option=downloads&task=info&id=68&Itemid=50&-Pluginless-Khajiit-Head-Pack-Talk-Blink-Fix">Pluginless Khajiit Head Pack Talk-Blink Fix</a> - An animation fix for the Khajiit heads.
+				</ul>
+		</ol>
+</ul>
+
+<h3>Animations</h3>
+
+<ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/43982">Animation Compilation</a> - Replaces many character animations with ones that look more natural. Download the 0.40.0 version with fixes by Greatness7.
+</ul>
+
+<h1>Attire</h1>
+
+<h3>Clothing</h3>
+
+<ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/42262">Better Clothes</a> - Our primary clothing replacer. Download the non-installer version.
+		<ul>
+			<li>Hide/delete <code>Better Clothes_v1.1.esp</code> after installing.
+		</ul>
+	<li><a href="https://www.dropbox.com/s/3kwi2ha2anpu7kw/BCFix.zip">Better Clothes Fix</a> - A fix for one of the shirt models in Better Clothes. Made by Greatness7.
+	<li><a href="https://www.dropbox.com/s/usgjr6hwi53c6ma/BC%20Shoes%20Fix.zip">BC Shoes Fix</a> - A fix for several of the shoe models in Better Clothes. Made by Greatness7.
+	<li><a href="http://mw.modhistory.com/download--14998">BC Expensive Female Shirt Fix</a> - A fix for another of the shirt models in Better Clothes.
+		<ul>
+			<li>When installing, create a directory named <code>BC</code>, and put the .nif file into it. Then, create a directory named <code>Meshes</code> and put the <code>BC</code> folder inside of that.
+		</ul>
+	<li><a href="http://mw.modhistory.com/download-53-6647">More Better Clothes Vol. I</a> - An extension to Better Clothes that improves some shirts left untouched by Better Clothes.
+		<ul>
+			<li>Download both the main file and the <code>MBC_ArmsFix.rar</code> file at the bottom of the mod page.
+				<ul>
+					<li>When installing the Arms Fix, create a directory named <code>BC</code>, and put the .nif files into it. Then, create a directory named <code>Meshes</code> and put the <code>BC</code> folder inside of that.
+				</ul>
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/43423">Darknut's Better Clothes Textures</a> - Replaces the textures of many clothing items from Better Clothes with higher res versions.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/45499">Hirez Better Clothes</a> - Replaces some shirt textures from Better Clothes with high res versions.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/45773">Articus Mournhold Clothes</a> - New models and textures for clothing from Tribunal. Download both files, install the main file first.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/45786">Articus Solstheim Clothes</a> - New models and textures for clothing from Bloodmoon. Download both files, install the main file first.
+</ul>
+
+<h3>Accessories</h3>
+
+<ul>
+	<li><a href="http://download.fliggerty.com/download-136-1035">Drakkmore's Plugginless Ring Replacer</a> - New models and textures for all generic jewelry.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/25725">Unique Finery Replacer UFR</a> - Gives many unique accessories and clothing items unique appearances. Hide/delete <code>UFR_v3dot2_noRobe.esp</code> after installing.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/46151">Unique Jewelry Redone</a> - Gives all unique rings and amulets that UFR doesn't cover unique appearances.
+</ul>
+
+<h3>Robes</h3>
+
+<ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/42773">Better Robes</a> - Gives all robe models smoothed meshes, as well as seperate meshes for female characters.
+		<ul>
+			<li>When installing, check <code>Data Files</code> and the <code>patch for UFR</code>. If you're using TR, you should also check the <code>patch for TR</code>.
+			<li><a href="https://www.nexusmods.com/morrowind/mods/44875">Better Robes - Updated Tamriel Rebuilt Patch</a> - Obviously only needed if you're using TR. Fixes Better Robes' TR patch to work with the newest versions of TR.
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/43748">Robe Overhaul</a> - High res textures for all of Morrowind's robes. Download the main file.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/43795">Various tweaks and fixes</a> - Robe Overhaul gives several robes glowing effects. If you think these look tacky, you can download <code>Blank Glow Maps for Robe Overhaul</code> from this page.
+</ul>
+
+<h3>Armor</h3>
+
+<ul>
+	<li><a href="https://www.dropbox.com/sh/l1660o8fg664bii/AAB-OssUyNu03Y5aGCO1Gav0a/Improved%20Armor%20parts?dl=0">Improved Armor Parts</a> - Some assorted improvements for several armor pieces. Download the dropbox folder as a .zip and install.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/41947">HiRez Armors- Native Styles</a> - Retextures for many armor sets. Most of this mod is superceded by the next mod, but we still need some files from it.
+	<li><a href="https://www.dropbox.com/s/4g4bmi3cr33g5ms/HiRez%20Armors-%20Native%20Styles%20V2.zip">HiRez Armors- Native Styles V2</a> - High res textures for a ton of different armor sets.
+		<ul>
+			<li><a href="http://forums.bethsoft.com/topic/1441431-relz-hirez-armors-native-styles-v2/page-2#entry22297270">Native Styles V2 Texture Fixes</a> - Adds some textures missing from the main file of Native Styles V2.
+			<li><a href="https://www.dropbox.com/s/qmnk4id4b6lohy6/HiRez%20Native%20Armor%20Styles%20V2%20Fixes.zip?dl=0">Native Styles V2 Mesh Fixes</a> - Fixes several mesh errors from Native Styles V2. Made by Greatness7.
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/44210">Armors Retexture - Outlander Styles</a> - Retextures for armor sets not covered by Native Styles. Only download the HQ main file.
+		<ul>
+			<li>Hide/delete <code>TX_A_Orcish_cloth.dds</code> and <code>TX_A_Templar_helmet.dds</code> after installing.
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/44264">Full Dwemer Retexture</a> - Now, download the <code>Only armor and robots and weapons HQ</code> file from this page.
+	<li><a href="http://mw.modhistory.com/download-37-15376">Dark Brotherhood retexture - Beetlejuice Armor - Insect Style</a> - HQ textures for Dark Brotherhood armor, with a bugshell design. Optional, as it's a big departure from vanilla.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/47266">Ellie's Mystic Minimods</a> - Download the <code>Touched-up Ringmail</code> file. Improves a cuirass not covered by other mods.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/43330">Various little mods</a> - A couple armor replacers can be found here. Download <code>Colovian helm and heavy leather boots retexture</code>, <code>Dust adept helm retexture</code>, and <code>Eleidon's Ward retexture</code>.
+		<ul>
+			<li>All of these mods have both 1k and 2k variations; the 1k versions look fine, but you can use the 2k versions if you want. (For the colovian helm, set either the <code>1k</code> or <code>2k</code> folder as the data directory).
+			<li><a href="https://www.nexusmods.com/morrowind/mods/43795">Various tweaks and fixes</a> - Download <code>Lougians colovian helm fix</code>. Fixes issues with the colovian fur helm replacer. Check Core when installing, as well as the 2k textures if you want.
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/42138">New Gondolier Helm</a> - Replaces the hat worn by gondolier NPCs.
+		<ul>
+			<li>I recommend installing this mod twice; first setting <code>data files</code> as the directory, and then setting the <code>chitin</code> folder within Extras as the directory.
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/43816">Improved Nordic Iron Helm Mesh</a> - Gives the Nordic Iron Helm a less awkward looking model. Only download the optional <code>Improved Nordic Iron Helm 1.0-alternate</code> file.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/45322">Nordic Trollbone Helm Replacer</a> - A new model and texture for the Nordic Trollbone Helm. Only download the main file.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/45111">Redoran Watchman's Helm Replacer</a> - A new model and texture for the Redoran Watchman's Helm.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/45041">Imperial Legion Shields</a> - New mesh and texture for the Imperial shield.
+		<ul>
+			<li>Optionally, you can move the files from the <code>Extras</code> folder into the main folder to add a new shield that matches the Imperial Templar set.
+				<ul>
+					<li>You only need the <code>TamDatafix</code> plugin from this addon if you're using Tamriel Rebuilt.
+				</ul>
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/42509">Better Morrowind Armor</a> - Replaces armor models with Better Bodies compatible versions. Don't download the main file, only the following optional files;
+		<ul>
+			<li>Download <code>Better Morrowind Armor ENG basic</code> and <code>patch for HiRez Armors- Native Styles V2</code>.
+				<ul>
+					<li>Note that <code>Complete Armor Joints.esp</code> just adds extra joints to several armor sets so that clothing/skin cannot be seen under them. Hide/delete it if don't want that.
+				</ul>
+			<li>If you're using Bethesda's official LeFemm Armor plugin, download the <code>patch for LeFemmArmor</code> file, but hide/delete the <code>LeFemmArmor.esp</code> included with it.
+		</ul>
+	<li><a href="https://mega.nz/#!WgBQ2RRL!5CQU0ZIVvIv1vyUsutAr3gT-qMhRUU6E4KEvoE9AeOs">Better Morrowind Armor DeFemm</a> - Optional. This set of patches adjusts how female armor appears; only keep one of the included .esps, and hide/delete the other two.
+		<ul>
+			<li>The (a) version disables the female versions of most armor sets (AKA: no "boob armor").
+			<li>The (o) version is most similar to the original game, where some armor sets have female versions and some do not.
+			<li>The (r) version keeps female versions of armor made from softer materials, buts removes the female versions of heavier armor sets.
+			<li>If none of these patches are installed, ALL armor sets will have female versions.
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/46044">Daedric Intervention</a> - Download the <code>Daedric Intervention - Armors</code> main file and the <code>Morrowind Better Armor compability patch</code> misc. file. Install the main file first.
+		<ul>
+			<li><code>Daedric Intervention - Armor.esp</code> just adds extra joints to some pieces of the Daedric armor set so that clothing/skin cannot be seen under them. hide/delete it if don't want that.
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/46372">Gold Armor Reforged</a> - Only needed if you're using the official LeFemm Armor plugin. Replaces the Gold Armor textures with high res versions. Only download the main file, and only check <code>Bethesda Official Plugin</code> when installing.
+	<li><a href="https://drive.google.com/open?id=1CCBKnyxDAK9o2PlQPdGgBl93grGvUR1F">High-Res Domina Armor</a> - Only needed if you're using the official LeFemm Armor plugin. Replaces the Domina armor textures with higher res versions. Textures made by tiebrakre.
+</ul>
+
+<h3>Artifact Armors</h3>
+
+<ul>
+	<li><a href="http://mw.modhistory.com/download-68-14515">Baldurian's Masque of Clavicus Vile Artifact Replacer</a> - A new model and texture for the Masque of Clavicus Vile.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/45183">Ebony Mail Replacer</a> - New model and texture for the Ebony Mail.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/46415">Daggerfall Style Auriel's Shield</a> - New model and texture for Auriel's Shield. Only download one file;
+		<ul>
+			<li>The main file (shown in the screenshots) gives the shield a new color scheme, based on Daggerfall.
+			<li>The <code>Vanilla Style</code> file, which keeps the shield's original color scheme.
+		</ul>
+</ul>
+
+<h1>Weapons</h1>
+
+<h3>Weapon Sheathing</h3>
+
+<ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/46069">Weapon Sheathing</a> - Optional, but highly recommended. This mod makes it so that sheathed weapons appear on the back or at the side of characters, rather than simply disappearing. It also adds visible quivers for equipped arrows. Download the MWSE version.
+		<ul>
+			<li>Install this mod twice; first setting Data Files as the data directory, and then setting the <code>animation compilation</code> folder within <code>Extras/alternate draw animations</code> as the data directory.
+		</ul>
+</ul>
+
+<h3>Weapons</h3>
+
+<ul>
+	<li><a href="https://www.dropbox.com/sh/l1660o8fg664bii/AAAO3m96a4O4J4JOUOUBmFnFa/Improved%20Weapon%20Meshes%20%26%20Textures%20WIP?dl=0">Improved Weapon Meshes & Textures WIP</a> Direct download the archive. New meshes and a new texture for several weapons. Made by Pherim.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/29906">Oriental Mesh Improvements</a> - Improved meshes for katanas and other curved blade weapons.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/43077">Real Reflective Weapons - Iron</a> - Improved meshes and textures for Iron weapons.
+		<ul>
+			<li>Install as a BAIN installer, and check <code>Data Files</code> and <code>Bonus</code>.
+			<li>After installing, hide/delete <code>Tx_metal_iron_rusty.dds</code> and <code>tx_wood_weathered_rings.dds</code>.
+			<li>Download the Weapon Sheathing patch if you're using it, and only check <code>Data Files</code> when installing.
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/43576">Correct Iron Warhammer</a> - Replaces the Iron Warhammer with a new model that matches the in-game description.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/43120">Improved Weapon Meshes - Steel</a> - Improved meshes for Steel weapons.
+		<ul>
+			<li>Download the main file and only check <code>Data Files</code> when installing. Hide/delete both of the mod's included .esp files.
+			<li>Download the Weapon Sheathing patch if you're using it, and only check <code>Data Files</code> when installing.
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/43335">Dwemer Armoury textured and updated</a> - Improved meshes for Dwemer weapons and some armor pieces.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/43484">Improved Weapon Meshes - Ebony</a> - Improved meshes for Ebony weapons.
+		<ul>
+			<li>Check <code>Data Files</code> when installing. You can check the <code>Ebony Claymore</code> too, if you want; it'll add two ESPs. One is English, and one is German. Hide/delete whichever one you don't need.
+			<li>Download the Weapon Sheathing patch if you're using it.
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/46778">Smooth Glass Weapons</a> - Improved meshes for Glass weapons.
+		<ul>
+			<li>Check <code>Data Files</code> and <code>Optional Textures</code> when installing.
+			<li>Download the Weapon Sheathing patch if you're using it. Check <code>Regular Sheaths</code> when installing.
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/46779">Smooth Orcish Weapons</a> - Improved meshes for Orcish weapons (and pauldrons).
+	<li><a href="https://www.nexusmods.com/morrowind/mods/46787">Silver Mesh Improvements</a> - Improved meshes for Silver weapons.
+		<ul>
+			<li>Check <code>Core</code> when installing, and the <code>Weapon Sheathing Patch</code> if you need it.
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/46792">Nordic Mesh Improvements</a> - Improved meshes for Nordic weapons.
+		<ul>
+			<li>Check <code>Core</code> and <code>Hires Textures</code> when installing, and the <code>Weapon Sheathing Patch</code> if you need it.
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/46044">Daedric Intervention</a> - Download the Weapons file. Replacers for all Daedric weapons.
+	<li><a href="http://download.fliggerty.com/download-98-1010">Crossbows</a> - New models for all of Morrowind's crossbows. Also adds some new crossbows.
+		<ul>
+			<li>If you aren't using Tamriel Rebuilt, hide/delete <code>Crossbows TR addon.ESP</code>.
+			<li>If you don't want the new crossbows added by the mod, hide/delete <code>Crossbows.ESP</code>.
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/45156">Bonemold Bow Replacer</a> - A new model and texture for the Bonemold Bow. Only download the main file.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/46488">Less Fat Adamantium Shortsword</a> - Improves the mesh of the Adamantium shortsword.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/45745">One-handed Adamantium Axe</a> - Changes the Adamantium axe from a two handed weapon to a one handed weapon, to better match its appearance.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/44894">Wooden Staff Replacer</a> - A new model and texture for the Wooden Staff weapon. Only download the main file.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/44763">Improved Thrown Weapon Projectiles</a> - Makes throwing weapons point the correct way when thrown, and some spin in the air.
+		<ul>
+			<li>This one needs to be installed multiple times; first, install with <code>Data Files</code> as the data directory.
+			<li>Next, set <code>Patches</code> as the data directory. Before installing, create a directory named <code>W</code>, and put the .nif files into it. Then, create a directory named <code>Meshes</code> and put the <code>W</code> folder inside of that.
+			<li>Lastly, download and install the Iron Knife patch from the mod's optional files.
+		</ul>
+</ul>
+
+<h3>Artifact Weapons</h3>
+
+<ul>
+	<li><a href="http://mw.modhistory.com/download-90-6436">Pluginless Weapon Replacer Project</a> - A replacer for the sword Umbra. Optional, as it's a departure from vanilla's look, but it looks great. Only download the main file, not either of the additional files.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/44500">The Tools of Kagrenac</a> - New models and textures for Keening and Sunder. Download the main file and the <code>Pristine Sunder</code> optional file.
+		<ul>
+			<li><a href="https://www.nexusmods.com/morrowind/mods/47266">Ellie's Mystic Minimods</a> - Download the <code>Tools of Kagrenac - Recolored Keening</code> file. Tweaks the Keening texture from the above mod to better match Sunder's color scheme.
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/44925">Chrysamere PBR</a> - A new model and texture for Chrysamere.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/45062">Ice Blade of the Monarch V2</a> - A new model and texture for the Ice Blade of the Monarch. Download the <code>Vanilla</code> file.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/45519">Bow of Shadows Replacer</a> - A new model and texture for the Bow of Shadows, inspired by its previous appearence in Redguard.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/45495">Volendrung HD</a> - A new model and texture for Volendrung.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/45759">Fang of Haynekhtnamet Replacer</a> - A new model and texture for the Fang of Haynekhtnamet.
+		<ul>
+			<li>If you're using Weapon Sheathing, install this mod a second time. Click "Manual" on the quick install menu, and set the <code>optional files/weapon sheathe</code> folder as the data directory.
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/47114">Skullcrusher Redone</a> - New model and texture for the artifact Skull Crusher. 
+		<ul>
+			<li>Download the <code>Skullcrusher Redone - Modern Sized</code> main file. If you want a more vanilla-friendly color scheme, download the <code>Skullcrusher Redone - Modern Sized - Colour Mimic</code> optional file and install it after the main file.
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/33432">True Trueflame</a> - A replacer for the blade Trueflame.
+	<li><a href="http://mw.modhistory.com/download-98-12378">HopesFire Replacer Morrowind Edition</a> - A replacer for the blade Hopesfire.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/45789">Staff of Magnus replacer by Articus - Skyrim style</a> - If you want the Staff of Magnus to more closely resemble its Skyrim appearance, you can download this. Optional, as it's a major departure from vanilla and we already have a vanilla-style mesh replacer for the Staff of Magnus. Only download one of the files; the Zapping version adds an extra particle effect to the sphere on the staff.
+</ul>
+
+<h1>Finalizing</h1>
+
+<h3>Distant Land</h3>
+
+<p>First, we'll want to download a groundcover mod, as they function through MGE XE's distant land system. There's two options for groundcover that I can recommend, compare the two and choose one.</p>
+
+<ol>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/46733">Remiros' Groundcover</a> - Includes rocks and mushrooms along with grass. Grasses are lush, but not very tall, making sure they're easy to see through. Grasses have been removed from certain areas of the landscape where they might cause issues or look off. More mod support out-of-the-box than Aesthesia. Download the main <code>Remiros' Groundcover</code> file.
+		<ul>
+			<li>When installing, check <code>Core</code>. If you're using Tamriel Rebuilt, check <code>TR Plugins</code> and <code>TR Preview Plugins</code> if you're playing with TR's preview plugin enabled.
+			<li>If you don't like the mushrooms added by this mod, you can check <code>No Mushrooms</code>.
+			<li>For grass that appears more dense, check <code>Thicker Grass</code>.
+			<li>If you're using <code>Solstheim Tomb of the Snow Prince</code>, hide/delete <code>Rem_Solstheim.esp</code>. The Vvardenfell and Solstheim Worldspace Remaster installer includes a patch for Remiros' Groundcover; just run the installer again and check <code>Remiros' Groundcover for S-TOTSP</code>.
+		</ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/46377">Aesthesia Groundcover</a> - Includes ferns, flowers, and other plants along with grass. Grasses are lush, often very tall, and cover the entire landscape. Less compatible out-of-the-box with some mods. Download the main file.
+		<ul>
+			<li>After installing, open the mod's files. Move <code>Grass Vanilla 1.esp</code> and <code>Grass Vanilla 2.esp</code> from the <code>Grass Vanilla</code> folder into the mod's main folder. If you AREN'T using <code>Solstheim Tomb of the Snow Prince</code>, you can also do this for <code>Grass Bloodmoon.esp</code> 
+			<li>If you're using Tamriel Rebuilt, move all of the files from the <code>Grass TR</code> folder into the mod's main folder. Do the same for the <code>Grass TR preview</code> folder if you're playing with TR's preview plugin enabled.
+		</ul>
+</ol>
+<ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/31051">Vurt's Groundcover</a> - Optional, if you want corals to be added underwater in some areas. Don't download the main file, only the <code>Vurts Corals</code> optional file.
+	<li><a href="https://www.nexusmods.com/morrowind/mods/43255">Distant Mournhold</a> - Allows you to see Mournhold's taller buildings from any part of the city.
+
+</ul>
+
+<p>If you need to generate new groundcover files (for example, if you want to use Aesthesia's grass with <code>Solstheim Tomb of the Snow Prince</code>, <a href="https://www.nexusmods.com/morrowind/mods/46377">the Aesthesia mod page</a> has a short guide on how to do so towards the bottom.</p>
+<p>Now if you look at your plugins, you'll notice that the groundcover mods add... Quite a few .esp files. We don't actually want any of these plugins to be enabled in-game, so you should disable all of them (including Vurts Corals, if you're using it). Don't hide or delete the files, just uncheck them from MO2's <code>Plugins</code> tab.</p>
+
+<p>Once you've done that, launch MGE XE and navigate to the Distant Land tab. Click <code>Distant land generator wizard</code> to begin the process.</p>
+	<ul>
+		<li>On the first window that pops up, click <code>Use current load order</code>. Then, find your Groundcover mod .esp files that we disabled in MO2 and check all of them as well. Click continue.
+		<li>On the next few windows, only change the settings if you think you need to; I would for the most part recommend keeping them at their defaults when you first run the program, and fine-tuning them later if you want to make your game look or run slightly better.
+	</ul>
+
+<p>Once you've finished generating distant land, you'll be able to modify a lot of options on MGE's Distant Land tab. Much like with distant land settings, I'd recommend mostly leaving these alone at first and seeing how you're game runs with the default settings before adjusting them.</p>
+	<ul>
+		<li>Draw distance adjusts how far you're able to see. I recommend a value somewhere between 5 and 15 cells.
+		<li>Dynamic ripples adds natural waves to the water. If you enable them, I recommend setting the height to 40.
+		<li>The Per-pixel lighting shader offers better dynamic lighting, with the expense being an often heavy FPS loss.
+			<ul>
+				<li>If you decide to play with per-pixel lighting enabled, you'll want to download the <a href="https://www.nexusmods.com/morrowind/mods/42306">Negative Lights Remover mod from here</a>.
+			</ul>
+		<li>High quality exponential fog and High quality atmosphere & distance coloring will make distant fog appear much more realistic, but can also reduce FPS somewhat.
+	</ul>
+
+<p>Note that generated distant land won't update automatically; if you install a new mod that makes any changes to the landscape or structures, you'll need to generate it again.</p>
+<p>One last note: if you want to speed up distant land generation a bit in the future, you can download the <a href="https://ntcore.com/?page_id=371">4GB Patch</a> and use it on <code>MGEXEgui.exe</code>.
+
+<h3>Shaders</h3>
+
+<p>First, we'll want to download some shaders that aren't included in MGE XE. This section can get pretty complicated, so bare with it.</p>
+<ul>
+	<li><a href="https://www.nexusmods.com/morrowind/mods/45432">Enhanced Water Shader for MGE XE</a> - Download only one file. <code>Green-Blue Water</code> gives water a somewhat green tint, whereas <code>Blue Water</code> keeps it purely blue.
+		<ul>
+			<li>When installing, you'll have two folders that each contain a <code>data files</code> directory. Use the one in the <code>without Sewer Waves</code> folder.
+			<li><a href="https://drive.google.com/open?id=1JITQA1t5yGnzudGm3gF2gRIkCf7grjxa">Water Shader Fixes</a> - Updated fixes for the above shaders. Only check one option when installing.
+		</ul>
+	<li><a href="https://cdn.discordapp.com/attachments/381217735306248192/609149467962376224/EdgeAA.zip">EdgeAA</a> - A shader that emulates Antialiasing effects, best used alongside MGE's existing AA options. Made by Vtastek.
+</ul>
+
+<p>Next, we'll download some more of Vtastek's shaders released on the MMC Discord. These won't be installed with MO2, we need to add them manually. Download both of them first.</p>
+<ul>
+	<li><a href="https://cdn.discordapp.com/attachments/381217735306248192/587447644876439572/deband_fogaware.fx">Deband Fogaware</a>
+	<li><a href="https://cdn.discordapp.com/attachments/381217735306248192/609153055186747402/Fog-linked_DoF.fx">Fog-linked DoF</a>
+</ul>
+<p>After downloading, move both .fx files into the <code>Morrowind\Data Files\shaders\XEshaders</code> folder.</p>
+
+<p>Now, go back to MO2 and launch MGE XE. Check the <code>Enable shaders</code> option, and click <code>Shader setup</code>. Once it opens, click the <code>Modding</code> button at the bottom.
+	<ul>
+		<li>First, click <code>Clear</code> to remove all active shaders.
+		<li>Now, add these shaders (by double clicking them in the <code>Avaliable shaders</code> section) in the following order:
+			<ul>
+				<li>SSAO HQ
+				<li>Underwater Effects
+				<li>Underwater Interior Effects
+				<li>Sunshafts
+				<li>Fog-linked_DoF
+				<li>deband_fogaware
+				<li>Bloom Soft
+				<li>EdgeAA
+				<li>Eye Adaptation (HDR)
+			</ul>
+		<li>Once you're done, simply click <code>Save</code>.
+	</ul>
+
+<h3>mlox</h3>
+
+<p>Since we're done installing mods for now, go ahead and launch mlox from MO2. You'll most likely have messages about missing Better Bodies or Robert's Bodies- you can safely ignore these. Just click <code>Update Load Order</code> and then exit the program.</p>
+<p>Generally, it's a good idea to run mlox like this every time you install new mods before you play the game. It won't always have any changes to make, but it's best to check anyway.
+
+<h3>Wrye Mash</h3>
+
+<p>Next, we'll launch Wrye Mash and go through several of its features.</p>
+	<ul>
+		<li>If you've launched the game at any point during this guide, you may have gotten an error on startup reading <code>"One or more plugins could not find the correct versions of the master files they depend on."</code> This is usually due to mods being built on versions of the official master files that are dated differently than the ones you have installed, and it can be easily corrected with Wrye Mash.
+			<ul>
+				<li>If you look at your mod list on Wrye Mash's Mods tab, you'll notice that most mods have a green check box next to them while some have a yellow or orange one.
+				<li>Click on a mod with an orange or yellow check box, and then click any of the master files listed in the lower right. Wrye Mash will ask if you want to edit/update the masters list. Click Yes, and then click the Save button below the masters list.
+				<li>Repeat this process for any offending mods until all of the boxes are green.
+			</ul>
+		<li>Next, we'll create a Multipatch. This is similar to the Bashed Patch for newer Bethesda games.
+			<ul>
+				<li>Click <code>Misc</code> at the top of the program, then <code>TES3cmd</code> > <code>Create MultiPatch</code>.
+				<li>The created patch won't have much in it right now, since we've mostly installed mods that only affect graphics. Like mlox, though, it's a good idea to remake your multipatch everytime you install new mods to prevent possible conflicts.
+			</ul>
+	</ul>
+
+<h1>Wrap-Up</h1>
+
+<p>And that's about it for this guide!</p>
+	</div>
+</body>
+
+<p>
+BETTER ROBES ANIMATED MORROWIND PATCH
+snow prince armor redux - better morrowind armor patch
+
+<h1>TR Addons</h1>
+
+<li>Glory to the Empire - Imperial Banners Retexture</a><a href="https://www.nexusmods.com/morrowind/mods/45962">
+
+</p>
+</html>
